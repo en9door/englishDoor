@@ -31,10 +31,12 @@ layout: default
 
 <article class="post-content">
   {{ content }}
-</article>
+
 {% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
+{% include disqus_comments.html %}
 {% endif %}
+
+</article>
 
 {% if site.jekyll-archives %}
 {% if page.tags.size > 0 %}
