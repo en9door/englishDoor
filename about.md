@@ -26,7 +26,7 @@ Kotlin * <br>
 Node.js * <br>
 AWS * <br>
 
-`Tools`
+`Tools`<br>
 AndroidStudio<br>
 Git<br>
 \* `Learning or lightly familer` <br>
