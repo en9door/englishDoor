@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.baseurl }}/assets/torvalds.png" title="Profile Picture" class="profile">
+<img src="{{ site.baseurl }}/assets/Quote.png" title="Profile Picture" class="profile">
 
 ## Dong-yeong Kim
 `Android Developer`<br>
@@ -28,8 +28,9 @@ AWS * <br>
 
 `Tools`
 AndroidStudio<br>
-Git<br>
-\* <h6>Learning or lightly familer</h6> <br>
+Git<br><br>
+\* 
+<h6>Learning or lightly familer</h6> <br>
 
 ### LANGUAGES
 English Business<br>
