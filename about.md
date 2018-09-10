@@ -16,20 +16,20 @@ BS, Computer Science Engineering<br>
 
 ### SKILLS
 `Front-end`<br>
-HTML*<br>
-CSS*<br>
-JavaScript*<br>
+HTML * <br>
+CSS * <br>
+JavaScript * <br>
 
 `Back-end`<br>
-Java<br>
-Kotlin*<br>
-Node.js*<br>
-AWS*<br>
+Java <br>
+Kotlin * <br>
+Node.js * <br>
+AWS * <br>
 
 `Tools`
 AndroidStudio<br>
 Git<br>
-* Learning or lightly familer<br>
+\* <h6>Learning or lightly familer</h6> <br>
 
 ### LANGUAGES
 English Business<br>
