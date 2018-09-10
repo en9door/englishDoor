@@ -56,8 +56,5 @@ public static int solution(int N) {
 ```
 <br>
 
-<div>
-###Result
-
+### Result
 <img src="{{ site.baseurl }}/assets/codility_result1.png" title="result" class="result">
-</div>
