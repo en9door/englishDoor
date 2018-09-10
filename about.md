@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.baseurl }}/assets/torvals.png" title="Profile Picture" class="profile">
+<img src="{{ site.baseurl }}/assets/torvalds.png" title="Profile Picture" class="profile">
 
 ## Dong-yeong Kim
 `Android Developer`<br>
@@ -42,7 +42,7 @@ Korean Native<br>
 * SK encar
 <h5>Seoul, Korea Nobember, 2016 - Present</h5>
 <h5>Android Developer</h5>
-<h4>Develop business logics for Android native and hybrid application with Java, JavaScript</h4>
+<h6>Develop business logics for Android native and hybrid application with Java, JavaScript</h6>
 <br>
 
 ### CONTACT
