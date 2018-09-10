@@ -29,7 +29,7 @@ AWS * <br>
 `Tools`
 AndroidStudio<br>
 Git<br>
-\* Learning or lightly familer <br>
+\* `Learning or lightly familer` <br>
 
 ### LANGUAGES
 English Business<br>
