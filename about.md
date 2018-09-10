@@ -28,8 +28,8 @@ AWS * <br>
 
 `Tools`
 AndroidStudio<br>
-Git<br><br>
-\*   <h6>Learning or lightly familer</h6> <br>
+Git<br>
+\* Learning or lightly familer <br>
 
 ### LANGUAGES
 English Business<br>
@@ -47,7 +47,7 @@ Korean Native<br>
 
 ### CONTACT
 noahkim.j@gmail.com<br>
-https://github.com/dongyyy[github]<br>
+[https://github.com/dongyyy][github]<br>
 
 
 [github]: https://github.com/dongyyy
