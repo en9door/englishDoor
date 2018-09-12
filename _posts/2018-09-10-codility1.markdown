@@ -5,6 +5,7 @@ date:   2018-09-10 23:43:00
 author: Dongy
 categories: Codility
 cover:  "/assets/codility.png"
+tags:	codility java BinaryGap
 ---
 
 ## Lesson 1 - BinaryGap
