@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: 둥이맘의 행복한 프로그래밍
+title: 즐겁고 행복한 프로그래밍
 subtitle: "Dongy's blog"
 email: noahkim.j@gmail.com
 name: Dongy
