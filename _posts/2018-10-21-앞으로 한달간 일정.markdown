@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "한달간의 계획"
+title:  "연말 계획"
 date:   2018-10-21 23:10:00
 author: Dongy
 categories: Front-End
@@ -17,16 +17,16 @@ tags:	HTML CSS JS ReactJS ReactNative
 웹 프론트엔드 기술(JavaScript, CSS, HTML)을 알아야겠다는 생각을 함.<br><br>
 
 뿐만아니라 최근 ReactNative의 명성이 자자하여 이를 활용하여 토이프로젝트를 진행해보고 싶음.<br>
-따라서 HTML, CSS, JavaScript, ReactJS, ReactNative를 2주간 공부하고 1달간 토이프로젝트를 진행할 계획.<br>
+따라서 HTML, CSS, JavaScript, ReactJS, ReactNative를 2주간 공부하고 1달간 토이 프로젝트를 진행할 계획.<br>
 
 
-<h3>공부계획</h3>
+## 공부 계획
 <ol>
 <li> 회사 - Android </li>
 <li> 퇴근하면서 - CS기본 </li>
 <li> 퇴근하면 알고리즘 </li>
-<li> 주말에는 프론트엔드 기술 공부와 토이프로젝트 </li>
-너무 빡빡하게 느껴질 수 있지만 내가 하고싶으므로 강행
+<li> 주말에는 프론트엔드 기술 공부와 토이 프로젝트 </li>
+너무 빡빡하게 느껴질 수 있지만 하고싶으므로 강행
 </ol>
 
 그리고 오늘 간단하게 HTML 공부한 내용을 링크 걸어본다.<br>
