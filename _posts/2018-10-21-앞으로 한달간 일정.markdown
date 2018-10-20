@@ -3,7 +3,7 @@ layout: post
 title:  "한달간의 계획"
 date:   2018-10-21 23:10:00
 author: Dongy
-categories: Front-EndStudyPlan
+categories: Front-End
 cover:  "/assets/front-end.png"
 tags:	HTML CSS JS ReactJS ReactNative
 ---
