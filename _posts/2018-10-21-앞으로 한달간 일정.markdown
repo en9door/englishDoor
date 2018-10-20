@@ -3,7 +3,7 @@ layout: post
 title:  "한달간의 계획"
 date:   2018-10-21 23:10:00
 author: Dongy
-categories: Front-End Study Plan
+categories: Front-EndStudyPlan
 cover:  "/assets/front-end.png"
 tags:	HTML CSS JS ReactJS ReactNative
 ---
@@ -28,7 +28,7 @@ tags:	HTML CSS JS ReactJS ReactNative
 </ul>
 
 그리고 오늘 간단하게 HTML 공부한 내용을 링크 걸어본다.<br>
-[HTML 공부][html]<br>
+[HTML 공부로 만든 html page][html]<br>
 
 [html]: https://dongyyy.github.io/html.html
 
