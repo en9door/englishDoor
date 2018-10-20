@@ -9,17 +9,15 @@ tags:	HTML CSS JS ReactJS ReactNative
 ---
 
 ## 생각정리
-
 10월부터 1개월동안 알고리즘, CS 기본 지식, Java, Android를 공부.<br>
-이론적인 공부만 하다보니 집중력이 저하됨.<br><br>
+이론적인 공부만 하다보니 집중력이 저하됨.<br>
 
 최근 하이브리드앱 프로젝트를 하면서 안드로이드 개발자는<br>
-웹 프론트엔드 기술(JavaScript, CSS, HTML)을 알아야겠다는 생각을 함.<br><br>
+웹 프론트엔드 기술(JavaScript, CSS, HTML)을 알아야겠다는 생각을 함.<br>
 
 뿐만아니라 최근 ReactNative의 명성이 자자하여 이를 활용하여 토이프로젝트를 진행해보고 싶음.<br>
 하드웨어 기능을 활용하는 앱이 아니라면 Android와 iOS 모두 구동할 수 있어 활용도가 뛰어날 것이기 때문.<br>
-따라서 HTML, CSS, JavaScript, ReactJS, ReactNative를 2주간 간단히 공부하고 1달간 토이 프로젝트를 진행할 계획.<br><br>
-
+따라서 HTML, CSS, JavaScript, ReactJS, ReactNative를 2주간 공부하고 1달간 토이 프로젝트를 진행할 계획.<br>
 
 ## 공부 계획
 <ol>
@@ -32,7 +30,7 @@ tags:	HTML CSS JS ReactJS ReactNative
 <br><br>
 
 ## 시작이 반
-오늘 간단하게 HTML 공부한 내용을 링크 걸어본다.<br>
+오늘 간단하게 HTML 공부한 내용을 html로 정리해봄.<br>
 [HTML 공부하여 만든 html page][html]<br>
 
 [html]: https://dongyyy.github.io/html.html
