@@ -4,6 +4,18 @@ title: About
 permalink: /about/
 ---
 
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127838774-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127838774-1');
+    </script>
+</head>
+
 <img src="{{ site.baseurl }}/assets/Quote.png" title="Profile Picture" class="profile">
 
 ## Dong-yeong Kim
