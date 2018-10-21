@@ -9,7 +9,7 @@ tags:	HTML CSS JS ReactJS ReactNative
 ---
 
 ## 시작이 반
-오늘 간단하게 HTML 공부한 내용을 html로 정리해봄.<br>
+오늘 간단하게 HTML과 CSS 공부한 내용을 html로 정리해봄.<br>
 [HTML 공부하여 만든 html page][html] <br>
 [CSS 공부하여 만든 html page][css] <br>
 
