@@ -28,15 +28,4 @@ tags:	HTML CSS JS ReactJS ReactNative
 <li> 주말에는 프론트엔드 기술 공부와 토이 프로젝트 </li>
 </ol>
 * 너무 빡빡하게 느껴질 수 있지만 하고싶으므로 강행
-<br><br>
-
-## 시작이 반
-오늘 간단하게 HTML 공부한 내용을 html로 정리해봄.<br>
-[HTML 공부하여 만든 html page][html] <br>
-[CSS 공부하여 만든 html page][css] <br>
-
-
-[html]: https://dongyyy.github.io/html.html
-
-[css]: https://dongyyy.github.io/css.html
 
