@@ -36,5 +36,5 @@ tags:	HTML CSS JS ReactJS ReactNative
 [CSS 공부하여 만든 html page][css]<br>
 
 [html]: https://dongyyy.github.io/html.html
-[css] : https://dongyyy.github.io/css.html
+[css]: https://dongyyy.github.io/css.html
 
