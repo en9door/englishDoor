@@ -7,17 +7,32 @@
 <style>
 
         body{
-            margin-left: 100px;
+            /* margin-left: 100px; */
+            margin:00px;
         }
 
         p {
-            margin-top:100px;   
+            margin-bottom:20px;   
+            padding:0px;
+            border:1px solid black;
+            display:block;
+            /* text-align: center; */
         }
 
         .important{
             color:blue;
             font-size: 15px;
             
+        }
+
+        div{
+            border:5px solid gray;
+        }
+
+        #grid{
+            border:5px solid pink;
+            display:grid;
+            grid-template-columns: 150px 1fr
         }
 
 </style>
@@ -74,11 +89,67 @@
 
 <p>
     <h2>박스모델</h2>
+
+    block level element ex)h1 tag<br>
+    inline element ex)a tag<br>
+    margin - border 밖 공간<br>
+    pading - border 안 공간<br>
+    border:5px solid red; - 하나의 속성에 값이 여러개인 효과, 선언<br>
+    margin pading border 등은 크롬 도구를 이용해서 보면 더욱 정확히 볼 수 있다.<br>
 </p>
 
 <p>
         <h2>그리드</h2>
-</p>
+        디자인이라는 목적을 위해 어떤 의미도 없는 태그를 써야할 경우가 있다!<br>
+        1. 그것이 바로 &lt;div&gt; tag! (div tag는 기본적으로 block level element)<br>
+        2. 같은 의미의 &lt;span&gt; tag! (span tag는 기본적으로 inline element)<br><br>
+
+
+        <div id="grid">
+                <div>NAVIGATION</div>
+                <div>NAVIGATIONsafndsnfkjsak;flskdjflkajlksjfl;asflkjsa;lfjsld;kafweefoiweh;oiaf</div>
+                 </div><br>
+
+
+        <div>
+        &lt;head&gt;<br>
+        &lt;style&gt;<br>
+                <blockquote>
+                #grid{<br>
+                    <blockquote>
+                  border:5px solid pink;<br>
+                  display:grid;<br>
+                  <strong>grid-template-columns: 150px 1fr;</strong><br>
+                    </blockquote>
+                }<br><br>
+
+                div{<br>
+                    <blockquote>
+                  border:5px solid gray;<br>
+                    </blockquote>
+                }<br>
+                </blockquote>
+        &lt;/style&gt;<br>
+            &lt;/head&gt;<br><br>
+
+            &lt;body&gt;<br><br>
+            <blockquote>
+              &lt;div id="grid"&gt;<br>
+                &lt;div>NAVIGATION&lt;/div&gt;<br>
+                &lt;div>NAVIGATION&lt;/div&gt;<br>
+                &lt;div&gt;<br>
+            </blockquote>              
+            &lt;/body&gt;<br><br>
+        </div>                 
+        <br>
+       
+
+         grid-template 속성에 fr 값을 사용하면 텍스트 길이에 따라 커지고 작아진다.<br>
+         하지만 <strong>grid</strong>는 최신 기술이기 때문에 <br>
+         전세계의 브라우저들이 얼마나 채택하고 있는지 확인해보고 사용하면 좋다.<br>
+         아래는 CSS HTML JS 등의 기술들을 브라우저들이 얼마나 채택하고 있는지 한 눈에 보여주는 사이트이다.<br>
+         <a href="https://caniuse.com/" target="_blank" title="caniuse site">https://caniuse.com/</a>
+</p>    
 
 <p>
         <h2>반응형 디자인</h2>
