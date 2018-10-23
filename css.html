@@ -35,6 +35,21 @@
             grid-template-columns: 150px 1fr
         }
 
+        @media(min-width:800px){
+            p {
+                border:none;
+            }
+
+        }
+        
+        @media(max-width:800px){
+            
+            #grid{
+            border:none;
+            display:block;
+            }
+        }
+
 </style>
 
 </head>
@@ -154,10 +169,40 @@
 
 <p>
         <h2>반응형 디자인</h2>
+
+        &lt;style&gt;
+        <blockquote>
+                div{<br>
+                <blockquote>        
+                  border:10px solid green;<br>
+                  font-size:60px;<br>
+                </blockquote>
+                }<br><br>
+
+                @media(min-width:800px) { <strong style="color:blue">- if (width &gt; 800) </strong><br>
+                @media(max-width:800px) { <strong style="color:blue">- if (width &lt; 800) </strong><br>
+                <blockquote>    
+                div{<br>
+                    <blockquote>
+                    display:none;<br>
+                    </blockquote>
+                  }<br>
+                </blockquote>  
+                }<br>
+                
+        </blockquote>                
+        &lt;/style&gt;
 </p>
 
 <p>
         <h2>CSS 코드의 재사용</h2>
+        &lt;head&gt;    
+            <blockquote>
+            &lt;link rel="stylesheet" href="style.css"&gt;
+            </blockquote>
+        &lt;/head&gt;
+        <br><br>
+        이런식으로 CSS를 외부 파일을 불러와 적용할 수 있다.
 </p>
 </body>
 </html>
