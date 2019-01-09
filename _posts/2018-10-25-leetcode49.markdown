@@ -8,8 +8,6 @@ cover:  "/assets/leetcode-logo.png"
 tags:	leetcode
 ---
 
-## LeetCode
-
-Repository to store solutions to various problems in Leetcode practice and weekly contests
+Repository to store solutions to various problems in Leetcode practice
 
 https://github.com/dongyyy/LeetCode-Java_Solution/
