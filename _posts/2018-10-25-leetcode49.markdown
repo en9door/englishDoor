@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode solutions Repository"
+title:  "LeetCode solutions( LeetCode 알고리즘 풀이 )"
 date:   2019-01-10 00:33:00
 author: Dongy
 categories: LeetCode Algorithm
@@ -9,5 +9,6 @@ tags:	leetcode
 ---
 
 Repository to store solutions to various problems in Leetcode practice
+Leetcode 알고리즘 풀이 저장소
 
 https://github.com/dongyyy/LeetCode-Java_Solution/
