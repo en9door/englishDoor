@@ -8,7 +8,7 @@ cover:  "/assets/leetcode-logo.png"
 tags:	leetcode
 ---
 
-Repository to store solutions to various problems in Leetcode practice
-Leetcode 알고리즘 풀이 저장소
+Repository to store solutions to various problems in Leetcode practice<br>
+Leetcode 알고리즘 풀이 저장소<br><br>
 
 https://github.com/dongyyy/LeetCode-Java_Solution/
