@@ -3,12 +3,19 @@ layout: post
 title:  "LeetCode solutions( LeetCode 알고리즘 풀이 )"
 date:   2019-01-10 00:33:00
 author: Dongy
-categories: LeetCode Algorithm
+categories: Leetcode
 cover:  "/assets/leetcode-logo.png"
 tags:	leetcode
 ---
 
-<strong>Leetcode 알고리즘 풀이 저장소<strong><br>
-<strong>Repository to store solutions to various problems in Leetcode practice<strong><br>
+## Leetcode 알고리즘 풀이 저장소
+# Repository to store solutions to various problems in Leetcode practice
 
-https://github.com/dongyyy/LeetCode-Java_Solution/
+좋은 프로그래머가 되고싶다면 <strong>알고리즘과 자료구조에 대한 지식, 이해 그리고 실전 활용</strong>은 필수인 것 같습니다.<br>
+학부생 때 열심히 공부했건만(이론적으로),,, 알고리즘 문제만 보면 응용하지 못하고 땀을 흘리네요.<br>
+가능하다면 매일 한 문제 이상 풀어보고 코드와 고민한 내용을 [Github Repository][repository]에 commit하겠습니다.<br>
+기왕이면 영어로 풀어보려고 [leet code][leetcode]를 선택했습니다 ㅋ.ㅋ<br>
+해보즈아 !<br>
+
+[leetcode]: https://leetcode.com/
+[repository]: https://github.com/dongyyy/LeetCode-Java_Solution/
