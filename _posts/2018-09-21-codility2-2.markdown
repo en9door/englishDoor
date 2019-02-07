@@ -3,7 +3,7 @@ layout: post
 title:  "Codility - OddOccurrencesInArray"
 date:   2018-09-18 23:43:00
 author: Dongy
-categories: CodingTest
+categories: Coding-Test
 cover:  "/assets/codility.png"
 tags:	codility java OddOccurrencesInArray
 ---

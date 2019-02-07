@@ -3,7 +3,7 @@ layout: post
 title:  "LeetCode solutions"
 date:   2019-01-10 00:33:00
 author: Dongy
-categories: CodingTest
+categories: Coding-Test
 cover:  "/assets/leetcode-logo.png"
 tags:	leetcode
 ---
