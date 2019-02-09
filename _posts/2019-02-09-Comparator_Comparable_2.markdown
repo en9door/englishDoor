@@ -9,7 +9,7 @@ tags:	Java Comparable Comparator
 ---
 
 <br>
-Java Comparable, Comparator Interface (1)에 이어서 <br>
+Java Comparable, Comparator Interface (1) 에 이어서 <br>
 키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
 <br>
 이 때도 Comparator를 이용하면 됩니다.<br>
@@ -65,20 +65,20 @@ Java Comparable, Comparator Interface (1)에 이어서 <br>
 	}
 
 //	이전 키를 기준으로 내림차순 정렬
-	<!-- class MyComparator implements Comparator<Friend>{
-
-		@Override
-		public int compare(Friend f1, Friend f2) {
-
-			if(f1.getHeight() > f2.getHeight() )
-				return 1;
-			else if(f1.getHeight() < f2.getHeight() )
-				return -1;
-			else
-				return 0;
-		}
-		
-	} -->
+//	 class MyComparator implements Comparator<Friend>{
+//
+//		@Override
+//		public int compare(Friend f1, Friend f2) {
+//
+//			if(f1.getHeight() > f2.getHeight() )
+//				return 1;
+//			else if(f1.getHeight() < f2.getHeight() )
+//				return -1;
+//			else
+//				return 0;
+//		}
+//		
+//	} 
 
 //	수정
 		class MyComparator implements Comparator<Friend>{
@@ -118,9 +118,6 @@ Java Comparable, Comparator Interface (1)에 이어서 <br>
 	}
 
 ```
-<br>
-
-￼<br>
 결과를 보면 키가 커지는 순으로 정렬되고 키가 같은 경우 몸무게가 작아지는 순으로 정렬된 것을 확인할 수 있습니다.<br>
 <br>
 <결과><br>
