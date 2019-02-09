@@ -216,7 +216,7 @@ String, Integer, Date, File 등과 같은 클래스들이 어떤 식으로 Compa
 그렇다면 내림차순도 정렬은 어떻게 해야할까요<br>
 <strong>Compatator</strong>을 사용하면 내가 원하대로 정렬 기준을 바꿀 수 있습니다.<br>
 <br>
-이제 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.<span>가 무슨 말인지 알아보겠습니다.<br>
+이제 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span>가 무슨 말인지 알아보겠습니다.<br>
 
 ### Code
 
@@ -306,6 +306,7 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 아래와 같은 결과를 얻을 수 있습니다.<br>
 <br>
+<결과><br>
 ￼김동*:184 민상*:190 강성*:200<br>
 <br>
 <br>
@@ -321,12 +322,9 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 <br>
 마지막으로 위 예제를 조금 더 생각해본다면<br>
-<br>
 키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
 <br>
-<br>
 이 때도 Comparator를 이용하면 됩니다.<br>
-<br>
 ### Code
 
 ```
