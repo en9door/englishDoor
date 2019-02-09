@@ -330,6 +330,88 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 
 ```
 
+//Compatator 예제
+
+	class Friend implements Comparable<Friend>{
+		String name;
+		int height;
+		int weight;
+		
+		public Friend(String name, int height, int weight){
+			this.name = name;
+			this.height = height;
+			this.weight = weight;
+		}
+		
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public int getHeight() {
+			return height;
+		}
+
+		public void setHeight(int height) {
+			this.height = height;
+		}
+
+		public int getWeight() {
+			return weight;
+		}
+
+		public void setWeight(int weight) {
+			this.weight = weight;
+		}
+
+//		@Override
+//		public int compareTo(Friend friend) {
+//			// TODO Auto-generated method stub
+//			return name.compareTo(friend.getName());
+//		}
+	}
+
+	class MyComparator implements Comparator<Friend>{
+
+		@Override
+		public int compare(Friend f1, Friend f2) {
+
+			if(f1.getHeight() > f2.getHeight() )
+				return 1;
+			else if(f1.getHeight() < f2.getHeight() )
+				return -1;
+			else
+				return 0;
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<Friend> friends = new ArrayList<>(); 
+		friends.add(new Friend("김동*", 184, 77));
+		friends.add(new Friend("민상*", 190, 70));
+		friends.add(new Friend("강성*", 200, 72));
+		
+		Collections.sort(friends, new MyComparator());
+		
+		int size = friends.size();
+		for(int i = 0; i < size ; i++){
+			System.out.print(friends.get(i).name + " "); 
+		}
+	}
+
+```
+
+
+### Code
+
+```
+
 	class MyComparator implements Comparator<Friend>{
 		
 		@Override
