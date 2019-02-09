@@ -4,21 +4,20 @@ title:  "Java Comparable, Comparator Interface"
 date:   2019-02-09 22:42:00
 author: Dongy
 categories: Java
-cover:  "/assets/the_red_sea.png"
+cover:  "/assets/the_red_sea.jpg"
 tags:	Java Comparable Comparator
 ---
 <br>
 Java로 개발을 하면서 배열이나 List 등의 Collection 프레임워크를 Arrays.sort(), Collections.sort()를 이용하여 정렬해본 경험이 있을겁니다.<br>
 <br>
-Arrays.sort(), Collections.sort() 메소드가 Merge Sort, Insertion Sort, QuickSort 등 정렬 기법 들을 구현하고 있다면,<br>
-Arrays.sort(), Collections.sort() 메소드가 오름차순으로 정렬할지 내림차순으로 정렬할지에 대한 <strong>정렬 기준은 Comparable, Comparator Interface가 정합니다.</strong><br>
+Arrays.sort(), Collections.sort() 메소드가 Merge Sort, Insertion Sort, QuickSort 등 <strong>정렬 기법</strong>들을 구현하고 있다면, 오름차순으로 정렬할지 내림차순으로 정렬할지에 대한 <strong>정렬 기준은 Comparable, Comparator Interface가 정합니다.</strong><br>
 <br>
 Java는 정렬의 기준을 정할 수 있도록 Comparable과 Comparator라는 두 가지 Interface를 제공합니다.<br>
 <br>
 <span style="color:red">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span><br>
 <br>
-그동안 우리가 사용했던 Arrays.sort(), Collections.sort() 가 오름차순 정렬을 해줄 수 있었던 이유는 Integer, String 등의 클레스에서 Comparable 를 구현하고 있으므로 자동으로 오름차순 정렬이 되었던 것이었습니다.<br>
+우리가 사용했던 Arrays.sort(), Collections.sort() 가 오름차순 정렬을 해줄 수 있었던 이유는 Integer, String 등의 클레스에서 Comparable 를 구현하고 있으므로 자동으로 오름차순 정렬이 되었던 것이었습니다.<br>
 <br>
 <br>
 <br>
@@ -326,9 +325,11 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 이 때도 Comparator를 이용하면 됩니다.<br>
 
+
 ### Code
 
 ```
+
 	class MyComparator implements Comparator<Friend>{
 		
 		@Override
