@@ -4,7 +4,7 @@ title:  "Java Comparable, Comparator Interface"
 date:   2019-02-09 22:42:00
 author: Dongy
 categories: Java
-cover:  "/assets/codility.png"
+cover:  "/assets/the_red_sea.png"
 tags:	Java Comparable Comparator
 ---
 <br>
@@ -15,13 +15,14 @@ Arrays.sort(), Collections.sort() 메소드가 오름차순으로 정렬할지 �
 <br>
 Java는 정렬의 기준을 정할 수 있도록 Comparable과 Comparator라는 두 가지 Interface를 제공합니다.<br>
 <br>
-<span style="color:red"><Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
+<span style="color:red">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span><br>
 <br>
 그동안 우리가 사용했던 Arrays.sort(), Collections.sort() 가 오름차순 정렬을 해줄 수 있었던 이유는 Integer, String 등의 클레스에서 Comparable 를 구현하고 있으므로 자동으로 오름차순 정렬이 되었던 것이었습니다.<br>
 <br>
 <br>
-여기까지 읽어도 도통 무슨 소린지 이해가 안가더라도 걱정하지 마십쇼.<br>
+<br>
+여기까지 읽어도 도통 무슨 소린지 이해가 안가더라도 괜찮습니다.<br>
 <br>
 이해를 돕기 위해 Arrays.sort(), Collections.sort() 예제를 확인해보면<br>
 ### Code
@@ -47,11 +48,9 @@ Java는 정렬의 기준을 정할 수 있도록 Comparable과 Comparator라는 
 	}
 
 ```
-<br>
-
 위 예제에서 Arrays.sort(array), Arrays.sort(array2)는 int 와 String 의 Comparable 구현에 의해 오름차순의 기준을 가지고 정렬할 수 있었던 것입니다.<br>
 <br>
-<span style="color:red">이것이 Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다는 말입니다.</span><br>
+이것이 <span style="color:red">Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다는 말입니다.</span><br>
 <br>
 Comparable 을 구현하고 있는 클래스들은 같은 타입의 인스턴스끼리 서로 비교할 수 있는 클래스들, String, Integer, Date, File 등과 같은 클래스들 입니다.<br>
 <br>
@@ -82,6 +81,7 @@ List 는 Collection 프레임워크 이므로 Arrays.sort()가 아닌 Collection
 
 
 ```
+<br>
 <br>
 <br>
 <br>
@@ -127,17 +127,19 @@ class Friend{
 		}
 	}
 
-	List<Friend> friends = new ArrayList<>(); 
-	friends.add(new Friend("김동*”, 184, 77));
-	friends.add(new Friend("민상*”, 190, 70));
-	friends.add(new Friend("강성*”, 200, 72));
+	public static void main(String[] args) {
+		List<Friend> friends = new ArrayList<>(); 
+		friends.add(new Friend("김동*", 184, 77));
+		friends.add(new Friend("민상*", 190, 70));
+		friends.add(new Friend("강성*", 200, 72));
 		
-	Collections.sort(friends);
+		Collections.sort(friends);
 
 		int size = friends.size();
 		for(int i = 0; i < size ; i++){
 			System.out.print(friends.get(i).name + " "); 
 		}
+	}
 
 ```
 <br>
@@ -146,10 +148,10 @@ Friend 는 이름, 키, 몸무게 맴버변수를 가지고 있고 각각 setter
 Arrays.sort(), Collections.sort() 는 작동할까요?<br>
 <br>
 오류가 발생합니다.<br>
-이유는 객체내의 어떤 맴버변수를 기준으로 정렬할지 정하지 않았기 때문입니다.<br>
+<strong>이유는 객체내의 어떤 맴버변수를 기준으로 정렬할지 정하지 않았기 때문입니다.</strong><br>
 객체를 정렬할 경우 객체 내의 어떤 변수로 정렬할지 만들어줘야 합니다.<br>
 <br>
-Comparable 인터페이스를 implements한 뒤 compareTo 메소드를 오버라이드하면 해결할 수 있습니다.<br>
+<strong>Comparable 인터페이스를 implements한 뒤 compareTo 메소드를 오버라이드하면 해결할 수 있습니다.</strong><br>
 <br>
 ### Code
 
@@ -204,15 +206,15 @@ compareTo 메서드는 매개변수로 Friend 객체를 받고,<br>
 리턴값으로는 Friend 객체의 name 변수와 비교하는 구문을 넣었습니다.<br>
 <br>
 위와같이 수정하고 실행하면 강성* 김동* 민상* 순(오름차순)으로 정렬이 되는 것을 확인할 수 있습니다.<br>
-<span style="color:red">다시 한번 Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다는 말을 확인했습니다.
-<span><br>
 <br>
-또 String, Integer, Date, File 등과 같은 클래스들이 어떤 식으로 Comparable 을 구현하고 있을 지도 이제 알았습니다.<br>
+다시 한번 <span style="color:red">Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다</span>는 말을 확인했습니다.
 <br>
 <br>
+String, Integer, Date, File 등과 같은 클래스들이 어떤 식으로 Comparable 을 구현하고 있을 지도 대략 알았습니다.<br>
 <br>
-오름 차순 정렬 말고 내림차순도 정렬을 하려면 어떻게 해야할까요<br>
-Compatator을 사용하면 내가 원하대로 정렬 기준을 바꿀 수 있습니다.<br>
+<br>
+그렇다면 내림차순도 정렬은 어떻게 해야할까요<br>
+<strong>Compatator</strong>을 사용하면 내가 원하대로 정렬 기준을 바꿀 수 있습니다.<br>
 <br>
 이제 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.<span>가 무슨 말인지 알아보겠습니다.<br>
 
@@ -275,10 +277,6 @@ Compatator을 사용하면 내가 원하대로 정렬 기준을 바꿀 수 있�
 				return -1;
 			else
 				return 0;
-
-//			또는 아래와 같은 방법들로도 내림차순 정렬 할 수 있습니다.
-//			return f1.getHeight().compareTo(f2.getHeight()) * -1;  //1번 방법
-//			return f2.getHeight().compareTo(f1.getHeight());  //2번 방법
 		}
 		
 	}
@@ -287,9 +285,9 @@ Compatator을 사용하면 내가 원하대로 정렬 기준을 바꿀 수 있�
 		// TODO Auto-generated method stub
 		
 		List<Friend> friends = new ArrayList<>(); 
-		friends.add(new Friend("김동*”, 184, 77));
-		friends.add(new Friend("민상*”, 190, 70));
-		friends.add(new Friend("강성*”, 200, 72));
+		friends.add(new Friend("김동*", 184, 77));
+		friends.add(new Friend("민상*", 190, 70));
+		friends.add(new Friend("강성*", 200, 72));
 		
 		Collections.sort(friends, new MyComparator());
 		
@@ -321,13 +319,11 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 <br>
 <br>
-더 알아보기<br>
 <br>
-위 예제를 다른 방법으로 생각해본다면<br>
+마지막으로 위 예제를 조금 더 생각해본다면<br>
 <br>
-키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해야합니다. <br>
+키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
 <br>
-어떻게 구현해야할까요?<br>
 <br>
 이 때도 Comparator를 이용하면 됩니다.<br>
 <br>
@@ -357,6 +353,7 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 ```
 ￼<br>
 결과를 보면 키가 커지는 순으로 정렬되고 키가 같은 경우 몸무게가 작아지는 순으로 정렬된 것을 확인할 수 있습니다.<br>
-
-<결과>
-김동*:184,77 민상*:190,70 장재*:200,80 강성*:200,72
+<br>
+<결과><br>
+김동*:184,77 민상*:190,70 장재*:200,80 강성*:200,72<br>
+<br>
