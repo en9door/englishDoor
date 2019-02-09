@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java Comparable, Comparator Interface"
+title:  "Java Comparable, Comparator Interface (1)"
 date:   2019-02-09 22:42:00
 author: Dongy
 categories: Java
@@ -218,37 +218,6 @@ String, Integer, Date, File 등과 같은 클래스들이 어떤 식으로 Compa
 이제 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span>가 무슨 말인지 알아보겠습니다.<br>
 
 ### Code
-```
-	class MyComparator implements Comparator<Friend>{
-		
-		@Override
-		public int compare(Friend f1, Friend f2) {
-			// TODO Auto-generated method stub
-			if(f1.getHeight() > f2.getHeight() )
-				return 1;
-			else if(f1.getHeight() < f2.getHeight() )
-				return -1;
-			else{
-				if(f1.getWeight() < f2.getWeight() )
-					return 1;
-				else if(f1.getWeight() > f2.getWeight() )
-					return -1;
-				else
-					return 0;
-			}
-		}
-	}
-
-```
-
-￼<br>
-결과를 보면 키가 커지는 순으로 정렬되고 키가 같은 경우 몸무게가 작아지는 순으로 정렬된 것을 확인할 수 있습니다.<br>
-<br>
-<결과><br>
-김동*:184,77 민상*:190,70 장재*:200,80 강성*:200,72<br>
-<br>
-
-### Code
 
 ```
 
@@ -351,9 +320,3 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 <br>
 <br>
-정말 마지막으로<br>
-키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
-<br>
-이 때도 Comparator를 이용하면 됩니다.<br>
-<br>
-
