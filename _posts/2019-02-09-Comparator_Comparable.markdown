@@ -325,11 +325,9 @@ MyComparator 클래스에 Comparator<Friend>를 implements 하여 선언하였�
 <br>
 이 때도 Comparator를 이용하면 됩니다.<br>
 
-
 ### Code
 
 ```
-
 	class MyComparator implements Comparator<Friend>{
 		
 		@Override
