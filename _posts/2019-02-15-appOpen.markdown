@@ -15,8 +15,8 @@ TTS, Camera App, 기기 내부 데이터 접근, Sqlite, Realm db, Glide 등의 
 
 앞으로는 컨텐츠 추가, 디자인 개선, 계정 및 카드의 서버 저장 기능, iOS 버전 등을 추가할 계획은(?) 가지고 있습니다...<br><br>
 
-<img src="{{ site.baseurl }}/assets/cardApp.png" title="result" class="result"><br><br>
-[Play Store 링크][Play Store 링크]<br><br>
+<img src="{{ site.baseurl }}/assets/cardApp.png" title="result" class="result"><br>
+[GooglePlay 링크][GooglePlay 링크]<br><br>
 
 
 ### 기능
@@ -35,5 +35,5 @@ TTS, Camera App, 기기 내부 데이터 접근, Sqlite, Realm db, Glide 등의 
 [내가 만드는 그림카드 소개 영상][내가 만드는 그림카드 소개 영상]<br><br>
 
 
-[Play Store 링크]: https://play.google.com/store/apps/details?id=com.compoundinterest.card
+[GooglePlay 링크]: https://play.google.com/store/apps/details?id=com.compoundinterest.card
 [내가 만드는 그림카드 소개 영상]: https://www.youtube.com/watch?v=AMGEkbjYHDQ
