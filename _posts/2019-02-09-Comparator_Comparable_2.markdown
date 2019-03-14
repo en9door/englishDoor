@@ -9,8 +9,10 @@ tags:	Java Comparable Comparator
 ---
 
 <br>
-Java Comparable, Comparator Interface (1) 에 이어서 <br>
-키로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
+Java Comparable, Comparator Interface (1) 에서 <br>
+Comparable Interface와 Comparator Interface 의 기본적인 사용법을 알아보았습니다. <br><br>
+앞서 살펴본 예제를 생각하면서<br>
+Friend 인스턴스의 키(height) 로 오름차순 정렬하되, 비교 대상의 키가 서로 같다면 몸무게(weight) 로 내림차순 정렬해한다면 어떻게 구현해야할까요?<br>
 <br>
 이 때도 Comparator를 이용하면 됩니다.<br>
 <br>
@@ -22,7 +24,7 @@ Java Comparable, Comparator Interface (1) 에 이어서 <br>
 
 //Compatator 예제
 
-	class Friend implements Comparable<Friend>{
+	class Friend {
 		String name;
 		int height;
 		int weight;
@@ -57,14 +59,10 @@ Java Comparable, Comparator Interface (1) 에 이어서 <br>
 			this.weight = weight;
 		}
 
-//		@Override
-//		public int compareTo(Friend friend) {
-//			// TODO Auto-generated method stub
-//			return name.compareTo(friend.getName());
-//		}
 	}
 
 //	이전 키를 기준으로 내림차순 정렬
+
 //	 class MyComparator implements Comparator<Friend>{
 //
 //		@Override
@@ -80,7 +78,8 @@ Java Comparable, Comparator Interface (1) 에 이어서 <br>
 //		
 //	} 
 
-//	수정
+//	수정 (키를 기준으로 오름차순 정렬하되, 키가 같으면 몸무게로 내림차순 정렬)
+
 		class MyComparator implements Comparator<Friend>{
 		
 		@Override
@@ -118,7 +117,7 @@ Java Comparable, Comparator Interface (1) 에 이어서 <br>
 	}
 
 ```
-결과를 보면 키가 커지는 순으로 정렬되고 키가 같은 경우 몸무게가 작아지는 순으로 정렬된 것을 확인할 수 있습니다.<br>
+결과를 보면 키가 커지는 순(오름차순) 으로 정렬되고 키가 같은 경우 몸무게가 작아지는 순(내림차순) 으로 정렬된 것을 확인할 수 있습니다.<br>
 <br>
 <결과><br>
 김동*:184,77 민상*:190,70 장재*:200,80 강성*:200,72<br>
