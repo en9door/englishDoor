@@ -12,7 +12,7 @@
         }
 
         p {
-            margin-bottom:20px;   
+            margin-bottom:40px;   
             padding:0px;
             border:1px solid black;
             display:block;
@@ -59,13 +59,14 @@
 <h1 style=text-align:center;color:blue>생활코딩 : WEBn >  WEB2 - CSS 내용 정리</h1>
 
 <p>
-    <h2>CSS를 먹이는 2가지 방법</h2>
+    <h2>CSS를 먹이는 3가지 방법</h2>
     <ol>
-       <li> html attribute(style) 속성 이용</li>
-       <li> style tag, selector, declaration, property, value 이용 </li>
+       <li> Inline Styles : html attribute(style) 속성 이용  </li>
+       <li> Internal Style Sheet : style tag, selector, declaration, property, value 이용 </li>
+       <li> External Style Sheet : 하나의 .css 파일을 만들어 style tag, selector, declaration, property, value 이용 </li>
     </ol>
 
-    찾아보니 사실 3가지 방법
+    [참고 사이트]<br>
     <a href="https://www.w3schools.com/css/css_howto.asp" target=_blank title="w3schools CSS How to...">W3S CSS How to... Reference</a>
 </p>
 
@@ -78,9 +79,10 @@
     </blockquote>
 
     <h2>2. style tag, selector, declaration, property, value 이용</h2>
-        &lt;style&gt; <strong class="important" >- style tag</strong> <br><br>
-
-        &lt;head&gt;
+    head 태그 안에 style 태그, 선택자 선언하고 속성을 줄 수 있다.<br><br>
+        
+    &lt;head&gt;<br><br>
+        &lt;style&gt; <strong class="important" >- style tag</strong> <br>
         <blockquote>
                 h1 { <strong class="important">- selector(선택자)</strong><br>
                     <blockquote>
@@ -89,53 +91,56 @@
                     color:blue
                     </blockquote>
                 }<br><br>
-        </blockquote>
-        &lt;/head&gt;
-                
-    &lt;/style&gt;
+        </blockquote>        
+        &lt;/style&gt;<br><br>
+    &lt;/head&gt;
 </p>
 
 <p>
     <h2>selector(선택자) 종류</h2>
     <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank" title="w3schools CSS Selector Reference">CSS Selector Reference</a>
     <br><br>
-    기억할 것은 선택자가 먹히는 우선순위(selector's priority)가 id(#) > class(.) > tag 라는 사실!<br>
-    또한 #id tag 라던가 .class #id 같이 부모 자식 관계를 선택자료 표현하여 특정한 선택자를 지칭할 수 있다.
+    기억할 것은 선택자가 먹히는 우선순위(selector's priority)가 id(#) > class(.) > tag 라는 사실!<br> <br>
+    또한, #id tag 라던가 .class #id 같이 부모 자식 관계를 선택자로 표현하여 특정한 선택자를 지칭할 수 있다.
     <br><br>
 
     <h2>declaration(선언, 효과) 종류</h2>
-    는 하나하나 찾아봐야함;;
+    하나하나 찾아봐야함;;
 </p>
 
 <p>
     <h2>박스모델</h2>
 
-    block level element ex)h1 tag<br>
-    inline element ex)a tag<br>
-    margin - border 밖 공간<br>
-    pading - border 안 공간<br>
-    border:5px solid red; - 하나의 속성에 값이 여러개인 효과, 선언<br>
-    margin pading border 등은 크롬 도구를 이용해서 보면 더욱 정확히 볼 수 있다.<br>
+    block level element <br>
+    ex)h1 tag<br><br>
+    inline element <br>
+    ex)a tag<br><br>
+    margin - border 밖 공간<br><br>
+    pading - border 안 공간<br><br>
+    border:5px solid red; - 하나의 속성에 값이 여러개인 효과, 선언<br><br>
+    margin pading border 등은 크롬 도구를 이용해서 보면 더욱 정확히 볼 수 있다.<br><br>
 </p>
 
 <p>
         <h2>그리드</h2>
-        디자인이라는 목적을 위해 어떤 의미도 없는 태그를 써야할 경우가 있다!<br>
-        1. 그것이 바로 &lt;div&gt; tag! (div tag는 기본적으로 block level element)<br>
-        2. 같은 의미의 &lt;span&gt; tag! (span tag는 기본적으로 inline element)<br><br>
+        디자인이라는 목적을 위해 어떤 의미도 없는 태그를 써야할 경우가 있다!<br><br>
+        1. 그것이 바로 &lt;div&gt; tag 이다. (div tag는 기본적으로 block level element 이다.)<br><br>
+        2. 같은 의미의 &lt;span&gt; tag 가 있다. (span tag는 기본적으로 inline element 이다.)<br><br>
 
+        아래는 div 태그에 grid 속성을 이용하여 이용하여 표를 만든 것이다.<br>
 
         <div id="grid">
                 <div>NAVIGATION</div>
                 <div>NAVIGATIONsafndsnfkjsak;flskdjflkajlksjfl;asflkjsa;lfjsld;kafweefoiweh;oiaf</div>
-                 </div><br>
+        </div><br><br>
 
+        아래는 위 표를 만드는 소스이다.<br>
 
         <div style="  margin-left: 10px;display:grid; grid-template-columns: 300px ">
         &lt;head&gt;<br>
         &lt;style&gt;<br>
                 <blockquote>
-                #grid{<br>
+                #grid {<br>
                     <blockquote>
                   border:5px solid pink;<br>
                   <strong><u>display:grid;</u></strong><br>
@@ -143,7 +148,7 @@
                     </blockquote>
                 }<br><br>
 
-                div{<br>
+                div {<br>
                     <blockquote>
                   border:5px solid gray;<br>
                     </blockquote>
@@ -164,15 +169,17 @@
         <br>
        
 
-         grid-template 속성에 fr 값을 사용하면 텍스트 길이에 따라 커지고 작아진다.<br>
+         grid-template 속성에 fr 값을 사용하면 텍스트 길이에 따라 커지고 작아진다.<br><br>
          하지만 <strong>grid</strong>는 최신 기술이기 때문에 <br>
-         전세계의 브라우저들이 얼마나 채택하고 있는지 확인해보고 사용하면 좋다.<br>
-         아래는 CSS HTML JS 등의 기술들을 브라우저들이 얼마나 채택하고 있는지 한 눈에 보여주는 사이트이다.<br>
+         전세계의 브라우저들이 얼마나 채택하고 있는지 확인해보고 사용하면 좋다.<br><br>
+         아래는 CSS HTML JS 등의 기술들을 브라우저들이 얼마나 채택하고 있는지 한 눈에 보여주는 사이트이다.<br><br>
          <a href="https://caniuse.com/" target="_blank" title="caniuse site">https://caniuse.com/</a>
 </p>    
 
 <p>
         <h2>반응형 디자인</h2>
+
+        media 태그를 이용한다.<br><br>
 
         &lt;style&gt;
         <blockquote>
@@ -210,6 +217,7 @@
 </p>
 
 <a href="kcar://app"> kcar app 실행 하기 </a>
+<br><br><br>
 </body>
 </html>
 
