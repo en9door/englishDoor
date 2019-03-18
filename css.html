@@ -39,6 +39,10 @@
             color:gray;
         }
 
+        .active{
+            color:red;
+        }
+
         @media(min-width:800px){
             p {
                 border:none;
@@ -105,7 +109,8 @@
     <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank" title="w3schools CSS Selector Reference">CSS Selector Reference</a>
     <br><br>
     기억할 것은 선택자가 먹히는 우선순위(selector's priority)가 id(#) > class(.) > tag 라는 사실!<br> <br>
-    또한, #id tag 라던가 .class #id 같이 부모 자식 관계를 선택자로 표현하여 특정한 선택자를 지칭할 수 있다.
+    또한, #id tag 라던가 .class #id 같이 부모 자식 관계를 선택자로 표현하여 특정한 선택자를 지칭할 수 있다.<br><br>
+    그리고 밑에서 보겠지만 같은 선택자 여러개를 선언했다면 나중에 선언한 효과가 우선순위가 높다.
     <br><br>
 
     <h2>declaration(선언, 효과) 종류</h2>
@@ -138,12 +143,15 @@
 
         아래는 div 태그에 grid 속성을 이용하여 이용하여 표를 만든 것이다.<br>
 
-        <div id="grid" class="saw">
+        <div id="grid" class="saw active">
                 <div>NAVIGATION</div>
                 <div>NAVIGATIONsafndsnfkjsak;flskdjflkajlksjfl;asflkjsa;lfjsld;kafweefoiweh;oiaf</div>
         </div><br><br>
 
-        아래는 위 표를 만드는 소스이다.<br>
+        아래는 위 표를 만드는 소스이다.<br><br>
+        
+        특이한 것은 나중에 먹인 효과가 우선순위가 높게 적용되므로<br>
+        .saw와 .active 중 .active의 red 컬러가 글씨에 적용된 것을 볼 수 있다.
 
         <div style="  margin-left: 10px;display:grid; grid-template-columns: 300px ">
         &lt;head&gt;<br>
@@ -166,6 +174,12 @@
                 .saw {<br>
                     <blockquote>
                   color:gray;<br>
+                    </blockquote>
+                }<br><br>
+
+                .active {<br>
+                    <blockquote>
+                  color:red;<br>
                     </blockquote>
                 }<br>
                 </blockquote>
