@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Programmers]코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디 1"
+title:  "[Programmers] 코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디 1"
 date:   2019-03-18 20:10:32
 author: Dongy
 categories: Study
@@ -10,11 +10,11 @@ cover:
 ## 코딩 테스트
 코딩 테스트 문제들 혼자 풀다가 지쳤습니다...<br><br>
 이제는 대부분의 문제를 해결할 수 있지만<br>
-아직도 문제 푸는 속도나 소스의 질을 올리는데 많은 연습이 필요해보입니다.<br><br><br>
+아직도 문제 푸는 속도나 소스의 질을 올리는데 많은 연습이 필요해보입니다ㅜㅜ<br><br><br>
 
-### [Programmers]코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디
+### [Programmers] 코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디
 그래서 다시 재미를 붙이고 계속 달릴 수 있도록 페이스메이커를 고용했습니다!<br><br>
-[[Programmers]코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디][Programmers]코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디
+[코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디][코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디]
 가 제 페이스메이커입니다. ㅎㅎ<br><br><br>
 
 ### 스터디 방식
@@ -22,9 +22,9 @@ cover:
 일주일 동안 문제를 풀고 Github에 push하여 소스리뷰를 받는 형식으로 진행됩니다.<br><br><br>
 
 ### 첫시간 배운 것
-첫 시간에 간단한 오리엔테이션 이후<br>
+첫 시간에 간단한 오리엔테이션 이후,<br>
 바로 2 문제를 풀며 강의를 진행하셨는데<br>
-강사분이 푼 문제보다 사용하신 Tool과 Library가 기억이 남았습니다.<br><br>
+강사분이 푼 문제보다 사용하신 <strong>Tool과 Library</strong>가 기억이 남았습니다.<br><br>
 평소 많이 들어봤지만 사용해볼 기회가 없던 IntelliJ, TDD(Jnuit을 이용한), RxJava 등이었는데, <br>
 강의 끝나자마자 바로 설치해보고 따라해 보았습니다.<br><br>
 
@@ -44,7 +44,7 @@ cover:
 
 
 
-[[Programmers]코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디]: https://programmers.co.kr/learn/courses/9449
+[코딩테스트와 실무 역량 모두 잡는 알고리즘 스터디]: https://programmers.co.kr/learn/courses/9449
 [RxSwift 4시간만에 끝내기]: https://www.youtube.com/playlist?list=PL03rJBlpwTaAh5zfc8KWALc3ADgugJwjq
 [Intelli J 학생계정 만들고 무료로 사용하기]: https://minooz.tistory.com/165
 [Intelli J 에서 JUNIT 사용하기]: https://irrationnelle.tistory.com/15
