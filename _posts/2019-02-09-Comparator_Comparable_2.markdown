@@ -106,6 +106,7 @@ Friend 인스턴스의 키(height) 로 오름차순 정렬하되, <br>
 		friends.add(new Friend("김동*", 184, 77));
 		friends.add(new Friend("민상*", 190, 70));
 		friends.add(new Friend("강성*", 200, 72));
+		friends.add(new Friend("장재*", 200, 80));
 		
 		Collections.sort(friends, new MyComparator());
 		
