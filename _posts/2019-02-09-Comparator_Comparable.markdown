@@ -343,7 +343,7 @@ String, Integer, Date, File 등과 같은 클래스들도 같은 방식으로 Co
 마지막으로 배운 내용을 정리해보겠습니다. <br>
 <br>
 <span style="color:red"><strong>Arrays.sort() - 배열을 정렬합니다.</strong><br>
-<strong>Collections.sort() - Collection 프레임워크를 정렬합니다.</strong><br>
+<strong>Collections.sort() - Collection 프레임워크를 정렬합니다.</strong></span><br>
 <br>
 <span style ="text-decoration:line-through">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.<br>
 Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span><br><br>
