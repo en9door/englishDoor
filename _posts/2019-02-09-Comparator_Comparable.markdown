@@ -15,8 +15,10 @@ Arrays.sort(), Collections.sort() 메소드가 Merge Sort, Insertion Sort, Quick
 <br>
 Java는 정렬의 기준을 정할 수 있도록 Comparable과 Comparator라는 두 가지 Interface를 제공합니다.<br>
 <br>
-<span style="color:red">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
-<span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span><br>
+<span style ="text-decoration:line-through"><span style="color:red">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
+<span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span></span><br><br>
+<span style="color:red">Comparable - class 내부에서 정렬 기준을 지정할 때 사용합니다.</span><br>
+<span style="color:red">Compatator - class 외부에서 정렬 기준을 지정할 때 사용합니다.</span><br>
 <br>
 우리가 사용했던 Arrays.sort(), Collections.sort() 가 오름차순 정렬을 해줄 수 있었던 이유는 Integer, String 등의 클레스에서 Comparable 를 구현하고 있으므로 자동으로 오름차순 정렬이 되었던 것이었습니다.<br>
 <br>
@@ -54,7 +56,9 @@ Java는 정렬의 기준을 정할 수 있도록 Comparable과 Comparator라는 
 위 예제에서 Arrays.sort(array), Arrays.sort(array2)는 <br>
 int 와 String는 내부적으로 <strong>Comparable Interface을 구현하여 오름차순의 기준으로 정렬</strong>할 수 있는 것입니다.<br>
 <br>
-이것이 <span style="color:red">Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다는 말입니다.</span><br>
+<span style ="text-decoration:line-through">이것이 <span style="color:red">Comparable 인터페이스는 기본 정렬(오름차순 정렬)할 때 사용한다는 말입니다.</span><br>
+<br><br>
+이것이 <span style="color:red">class 내부에 정렬 기준을 지정할 때 사용한다는 말입니다.</span></span><br>
 <br>
 Comparable 을 구현하고 있는 클래스들은 서로 비교할 수 있는 클래스들<br>
 예를들면 String, Integer, Date, File 같은 클래스들 입니다.<br>
@@ -200,6 +204,27 @@ class Friend implements Comparable<Friend>{
 	@Override
 	public int compareTo(Friend friend) {
 		return name.compareTo(friend.getName());
+
+		// compareTo 메서드는 내부적으로 앞변수 - 뒷변수 합니다.
+		// 결과값이 + 면 앞 변수가 큰 수, 혹은 사전순으로 뒤에 오는 String으로 return 1 합니다.
+		// 결과값이 - 면 앞 변수가 작은 수, 혹은 사전순으로 앞에 오는 String으로 return -1 합니다.
+		// 결과값이 0 이면 두 변수가 같으므로 return 0 합니다.
+
+		//따라서 아래와 같이 구현하면 이름, 나이 등을 내림차순으로도 정렬할 수 있습니다.
+		//@Override
+        //public int compareTo(human o) {
+        //    if (name.charAt(0) > o.name.charAt(0)) return -1;
+        //    else if (name.charAt(0) < o.name.charAt(0)) return 1;
+        //    else return 0;
+        //}
+		//
+		//@Override
+        //public int compareTo(human o) {
+        //    if(age > o.age) return -1;
+        //    else if(age < o.age) return 1;
+        //    else return 0;
+        //}
+		
 	}
 }
 
@@ -213,7 +238,7 @@ compareTo 메서드는 매개변수로 Friend 객체를 받고,<br>
 <br>
 위와같이 수정하고 실행하면 결과가 강성* 김동* 민상* 순(오름차순)으로 정렬이 되는 것을 확인할 수 있습니다.<br>
 <br>
-다시 한번 <span style="color:red">Comparable 는 기본 정렬(오름차순 정렬)할 때 사용한다</span>는 말을 확인했습니다.
+다시 한번 <span style="color:red">class 내부에서 정렬 기준을 지정할 때 사용한다는 말입니다.</span>는 말을 확인했습니다.
 <br>
 <br>
 String, Integer, Date, File 등과 같은 클래스들도 같은 방식으로 Comparable 을 구현하고 있습니다.<br>
@@ -222,7 +247,7 @@ String, Integer, Date, File 등과 같은 클래스들도 같은 방식으로 Co
 그렇다면 내림차순 정렬은 어떻게 해야할까요<br>
 <strong>Compatator Interface</strong>를 사용하면 원하는 순서대로 정렬 기준을 바꿀 수 있습니다.<br>
 <br>
-이제 <span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span>가 무슨 말인지 알아보겠습니다.<br>
+이제 <span style="color:red">Compatator - class 외부에서 정렬 기준을 지정할 때 사용한다는 말입니다.</span>가 무슨 말인지 알아보겠습니다.<br>
 위 Friend Class 소스와 어떻게 다른지 비교하며 살펴보죠.<br>
 
 ### Code
@@ -273,6 +298,8 @@ String, Integer, Date, File 등과 같은 클래스들도 같은 방식으로 Co
 
 		@Override
 		public int compare(Friend f1, Friend f2) {
+			
+			// f1.getHeight - f2.getHeight 할 때,	
 
 			if(f1.getHeight() > f2.getHeight() )
 				return 1;
@@ -319,9 +346,14 @@ String, Integer, Date, File 등과 같은 클래스들도 같은 방식으로 Co
 <span style="color:red"><strong>Arrays.sort() - 배열을 정렬합니다.</strong><br>
 <strong>Collections.sort() - Collection 프레임워크를 정렬합니다.</strong><br>
 <br>
-<strong>Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</strong><br>
-<strong>Compatator - 원하는데로 정렬 기준, 순서를 지정할 때 사용합니다.</strong></span><br>
+<span style ="text-decoration:line-through"><span style="color:red">Comparable - 기본 정렬(오름차순 정렬)할 때 사용합니다.</span><br>
+<span style="color:red">Compatator - 원하는데로 정렬 순서를 지정할 때 사용합니다.</span></span><br><br>
+<span style="color:red">Comparable - class 내부에 정렬 기준을 지정할 때 사용합니다.</span><br>
+<span style="color:red">Compatator - class 외부에서 정렬 기준을 지정할 때 사용합니다.</span><br>
 <br>
+결국 Comparable과 Compatator의 차이는 아래와 같습니다.<br><br>
+1. class 내부에 기준을 만들어 두느냐 class 외부에 기준을 생성하느냐의 차이<br><br>
+2. compareTo(Object o) 메서드를 구현하느냐 compare(Object o1, Object o2) 메서드를 구현하느냐 차이<br>
 <br>
 <br>
 <br>
