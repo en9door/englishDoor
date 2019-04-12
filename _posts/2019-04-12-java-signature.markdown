@@ -1,19 +1,21 @@
 ---
 layout: post
-title:  "메소드 시그니처(Method signature)"
+title:  "메소드 시그니처 (Method signature)"
 date:   2019-04-11 21:20:32
 author: Dongy
 categories: Java
 cover:
 ---
 
-## 메소드 시그니처(Method signature)
-컴파일러가 메소드를 구분할 수 있게 해주는 서명(Signature)입니다.<br>
+## 메소드 시그니처 (Method signature)
 <br>
-자바에서는 메소드의 이름과 파라미터 만을 메소드의 시그니처(Method Signature)라고 합니다.<br>
+<strong>컴파일러가 메소드를 구분할 수 있게 해주는 서명(Signature)입니다.</strong><br>
 <br>
-아래 코드를 살펴보면 <br>
-draw() 메소드들은 메소드의 이름은 같지만 파라미터의 갯수와 타입이 달라 여러 번 선언할 수 있습니다. (메소드 오버로딩)<br>
+자바에서는 <strong>메소드의 이름과 파라미터</strong> 만을 <strong>메소드의 시그니처 (Method Signature)</strong> 라고 합니다.<br>
+<br>
+아래 코드를 살펴보면, <br>
+draw() 메소드들은 이름은 같지만 <strong>파라미터의 갯수와 타입</strong>이 다릅니다.<br> 
+따라서 컴파일러가 서로 다른 메소드로 구분합니다.<br>
 <br>
 
 
@@ -39,17 +41,26 @@ public class Pen {
     }
 
     //위 draw 메소드와 시그니처가 같아 선언 불가능
-    public int draw(int i, double f) {
-        //…
-	return 0;
-    }
+    //public int draw(int i, double f) {
+    //    //…
+	//  return 0;
+    //}
 
 }
 
 ```
 
 
-단, 리턴타입은 메소드 시그니처에 포함되지 않습니다.<br>
+<span style="color:red">단, 리턴타입은 메소드 시그니처에 포함되지 않습니다.</span><br>
 따라서 컴파일러는 메소드를 구분할 때 리턴 타입을 고려하지 않기 때문에 <br>
 서로 다른 리턴 타입을 가져도 동일한 시그니처를 가진 2개의 메소드를 선언할 수 없습니다.<br>
-<br>
+<br><br>
+
+
+### Java 기본 문법의 중요성,,,
+어제 한 기업 안드로이드 개발자로 최종면접을 봤습니다.<br>
+감사하게도 면접관님들께서 편안한 분위기로 면접을 진행해주셨습니다.<br>
+하지만,,, 대부분의 질문이 자바 기본 문법에 대한 질문이었고<br>
+부끄러울만큼 답변을 제대로 하지 못했습니다.<br>
+IDE에서 체크해주고 API에서 처리해주고 프레임웍 차원에서 지원해줘서 지나쳐온 자바 문법들을 다시 한번 보려고합니다.<br>
+앞으로 먄접에서 질문받았던 Java 기본 개념들에 대해서 포스팅하겠습니다. <br><br>
