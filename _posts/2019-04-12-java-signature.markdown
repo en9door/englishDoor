@@ -9,9 +9,9 @@ cover:
 
 ## 메소드 시그니처 (Method signature)
 <br>
-<strong>컴파일러가 메소드를 구분할 수 있게 해주는 서명(Signature)입니다.</strong><br>
 <br>
-자바에서는 <strong>메소드의 이름과 파라미터</strong> 만을 <strong>메소드의 시그니처 (Method Signature)</strong> 라고 합니다.<br>
+자바 컴파일러는 <strong>메소드의 이름</strong>과 <strong>파라미터</strong>를 이용하여 메소드를 구분합니다. <br>
+따라서, <strong>메소드의 이름</strong>과 <strong>파라미터</strong>를 <strong>메소드의 시그니처 (Method Signature)</strong> 라고 합니다.<br>
 <br>
 아래 코드를 살펴보면, <br>
 draw() 메소드들은 이름은 같지만 <strong>파라미터의 갯수와 타입</strong>이 다릅니다.<br> 
