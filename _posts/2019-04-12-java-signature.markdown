@@ -7,8 +7,6 @@ categories: Java
 cover:
 ---
 
-## 메소드 시그니처 (Method signature)
-<br>
 <br>
 자바 컴파일러는 <strong>메소드의 이름</strong>과 <strong>파라미터</strong>를 이용하여 메소드를 구분합니다. <br>
 따라서, <strong>메소드의 이름</strong>과 <strong>파라미터</strong>를 <strong>메소드의 시그니처 (Method Signature)</strong> 라고 합니다.<br>
@@ -18,8 +16,6 @@ draw() 메소드들은 이름은 같지만 <strong>파라미터의 갯수와 타
 따라서 컴파일러가 서로 다른 메소드로 구분합니다.<br>
 <br>
 
-
-### Code
 ```
 
 public class Pen {
@@ -50,7 +46,7 @@ public class Pen {
 
 ```
 
-
+<br>
 <span style="color:red">단, 리턴타입은 메소드 시그니처에 포함되지 않습니다.</span><br>
 따라서 컴파일러는 메소드를 구분할 때 리턴 타입을 고려하지 않기 때문에 <br>
 서로 다른 리턴 타입을 가져도 동일한 시그니처를 가진 2개의 메소드를 선언할 수 없습니다.<br>
