@@ -48,7 +48,6 @@ list.add("1");
 Integer one = list.get(0);
 ```
 위와 같은 코드는 IDE가 코드 실행 전에 다음과 같이 타입 애러가 발생했음을 알려줍니다.<br>
-<br>
 <strong>Incompatible types.</strong><br>
 <strong>Required: java.lang.Object</strong><br>
 <strong>Found:     java.lang.String</strong><br>
