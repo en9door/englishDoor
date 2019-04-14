@@ -24,7 +24,7 @@ List stringList = new ArrayList<>();
 ```
 <br>
 <br>
-###<strong>첫 번째 문제는 컴파일 시 타입 체크를 할 수 없습니다.</strong><br>
+### 첫 번째 문제는 컴파일 시 타입 체크를 할 수 없습니다.
 다음 코드를 살펴보시면, IDE는 어떤 애러도 발견하지 못합니다.<br>
 ```
 List list = new ArrayList<>();
@@ -56,7 +56,7 @@ Integer one = list.get(0);
 <br>
 
 
-###<strong>두 번째 문제는 타입 변환(casting)을 명시적으로 해줘야합니다.</strong><br>
+### 두 번째 문제는 타입 변환(casting)을 명시적으로 해줘야합니다.
 비 제네릭 코드는 불필요한 타입 변환을 해야하기 때문에 프로그램 성능에 악영향을 미칩니다.<br>
 다음 코드를 보면 List에 문자열 요소를 저장했지만, 요소를 찾아올 때는 반드시 String으로 타입 변환을 해야 합니다.<br>
 ```
