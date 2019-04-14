@@ -14,18 +14,17 @@ cover:
 ```
 List<String> stringList = new ArrayList<>();
 ```
-이처럼 선언, 생성, 할당하면서 ArrayList 내부에 담을 타입을 지정하는 기법입니다.<br>
+이처럼 선언, 생성, 할당하면서 동시에 ArrayList 내부에 담을 타입을 지정하는 기법입니다.<br>
 <br>
-반면에, 아래와 같이 아무 타입도 지정하지 않고(자동으로 Object 타입로 지정) 여러가지 자료형을 허용하면, <br>
+반면에, 아래와 같이 아무 타입도 지정하지 않고 (자동으로 Object 타입로 지정) 여러가지 자료형을 허용하면, <br>
 <strong>두 가지 문제</strong>가 발생합니다.<br>
 
 ```
 List stringList = new ArrayList<>();
 ```
 <br>
-
-<strong>첫 번째 문제는 컴파일 시 타입 체크를 할 수 없습니다.</strong><br>
 <br>
+###<strong>첫 번째 문제는 컴파일 시 타입 체크를 할 수 없습니다.</strong><br>
 다음 코드를 살펴보시면, IDE는 어떤 애러도 발견하지 못합니다.<br>
 ```
 List list = new ArrayList<>();
@@ -34,6 +33,7 @@ list.add("1");
 Integer one = (Integer)list.get(0);
 ```
 하지만 실행하면 다음과 같은 애러를 만나게 됩니다.<br>
+<br>
 java.lang.ClassCastException: java.base/java.lang.String cannot be cast to java.base/java.lang.Integer<br>
 <br>
 이와 같이 실행 전까지는 잘못된 캐스팅인지 알 수 없다는 문제가 생깁니다.<br>
@@ -48,16 +48,16 @@ list.add("1");
 Integer one = list.get(0);
 ```
 위와 같은 코드는 IDE가 코드 실행 전에 다음과 같이 타입 애러가 발생했음을 알려줍니다.<br>
-Incompatible types.<br>
-Required: java.lang.Object<br>
-Found:     java.lang.String<br>
+<br>
+<strong>Incompatible types.</strong><br>
+<strong>Required: java.lang.Object</strong><br>
+<strong>Found:     java.lang.String</strong><br>
+<br>
 <br>
 
 
-
-<strong>두 번째 문제는 타입 변환(casting)을 명시적으로 해줘야합니다.</strong><br>
-<br>
-비 제네릭 코드는 불필요한 타입 변환을 하기 때문에 프로그램 성능에 악영향을 미칩니다.<br>
+###<strong>두 번째 문제는 타입 변환(casting)을 명시적으로 해줘야합니다.</strong><br>
+비 제네릭 코드는 불필요한 타입 변환을 해야하기 때문에 프로그램 성능에 악영향을 미칩니다.<br>
 다음 코드를 보면 List에 문자열 요소를 저장했지만, 요소를 찾아올 때는 반드시 String으로 타입 변환을 해야 합니다.<br>
 ```
 List list = new ArrayList();
