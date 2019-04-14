@@ -36,11 +36,11 @@ Integer one = (Integer)list.get(0);
 <br>
 java.lang.ClassCastException: java.base/java.lang.String cannot be cast to java.base/java.lang.Integer<br>
 <br>
-이와 같이 실행 전까지는 잘못된 캐스팅인지 알 수 없다는 문제가 생깁니다.<br>
+<strong>이와 같이 실행 전까지는 잘못된 캐스팅인지 알 수 없다는 문제가 생깁니다.</strong><br>
 <br>
 <br>
-반면, 자바 컴파일러는 제네릭 코드에 대해 강한 타입 체크를 합니다.<br>
-강한 타입 체크란 컴파일 시에 미리 타입 유효성을 체크하여 실행 시 일어날 수 있는 타입 에러를 사전에 방지합니다.<br>
+반면, 자바 컴파일러는 <strong>제네릭 코드에 대해 강한 타입 체크</strong>를 합니다.<br>
+<strong>강한 타입 체크란 컴파일 시에 미리 타입 유효성을 체크하여 실행 시 일어날 수 있는 타입 에러를 사전에 방지</strong>합니다.<br>
 ```
 List<String> list = new ArrayList<>();
 list.add("1");
