@@ -70,3 +70,5 @@ List<String> list = new ArrayList<String>();
 list.add(“1”);
 String one = list.get(0);
 ```
+
+##관련 포스팅
