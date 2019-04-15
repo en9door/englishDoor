@@ -11,23 +11,24 @@ cover:
 ## 제네릭 사용 범위
 
 <strong>1. 클래스(생성자), 인터페이스</strong><br>
--타입을 파라미터로 가지는 클레스와 인터페이스를 제네릭 타입이라고 합니다.<br>
--클래스 또는 인터페이스 이름 뒤에 붙는 “<>” 사이에 T를 <strong>타입 파라미터</strong>라고 합니다.<br>
--클래스 레벨에서 제네릭이 설정되어있으면 static 메서드에서는 사용할 수 없습니다. (인스턴스가 만들어질 때 type parameter를 받아오기 때문입니다.)<br>
+- 타입을 파라미터로 가지는 클레스와 인터페이스를 제네릭 타입이라고 합니다.<br>
+- 클래스 또는 인터페이스 이름 뒤에 붙는 “<>” 사이에 T를 <strong>타입 파라미터</strong>라고 합니다.<br>
+- 클래스 레벨에서 제네릭이 설정되어있으면 static 메서드에서는 사용할 수 없습니다. (인스턴스가 만들어질 때 type parameter를 받아오기 때문입니다.)<br>
 <br>
 <strong>2. 메서드</strong><br>
 <strong>파라미터, 리턴 타입</strong>으로 사용합니다.<br>
-static, instance 메소드에 사용할 수 있습니다. (인스턴스 생성할 떄 type parameter를 받아와 타입이 설정되기 때문입니다.)<br>
+static, instance 메소드에 사용할 수 있습니다. <br>
+(인스턴스 생성할 떄 type parameter를 받아와 타입이 설정되기 때문입니다.)<br>
 <br>
 아래에서 구체적인 사용 방식을 살펴보겠습니다.<br>
 <br>
 
 ## 제네릭 사용 방식
 
-### 1.Class generic type, Interface generic type
+### 1. Class generic type, Interface generic type
 Class generic type과 Interface generic type은 사용방법이 유사합니다.<br>
 <br>
-아래 소스는 Class generic type 사용 예입니다.
+아래 소스는 Class generic type을 사용하는 코드입니다.
 ```
 //구현
 class ClassGenericType<T> {
@@ -44,11 +45,12 @@ class ClassGenericType<T> {
 //사용방법
 ClassGenericType<String> classGenericType = new ClassGenericType<>();
 ```
-
+<br>
 
 
 ### 2. multi type parameter(멀티 타입 파라미터)
-멀티 타입 파라미터는 2개 이상의 제네릭 타입을 정의한 것입니다. 이 경우 각 타입 파라미터를 콤마로 구분하여 사용합니다.<br>
+멀티 타입 파라미터는 2개 이상의 제네릭 타입을 정의한 것입니다. <br>
+이 경우 각 타입 파라미터를 콤마로 구분하여 사용합니다.<br>
 <br>
 아래 코드에서는 <T1, T2>와 같이 제너릭 타입을 두 개 선언한 멀티 타입 파라미터를 사용하였습니다.
 
@@ -72,13 +74,13 @@ class InterfaceGenericTypeImpl implements InterfaceGenericType<String, Intege
         }
 }
 ```
-
+<br>
 
 
 ### 3.Method Generic Type
 제네릭 메소드는 매개 타입과 리턴 타입으로 타입 파라미터를 갖는 메소드를 말합니다.<br>
 <br>
-선언 방법은 메서드의 리턴 타입 앞에 <> 기호를 추가하고 타입 파라미터를 기술한 다음,<br>
+선언 방법은 메서드의 <strong>리턴 타입 앞에 <> 기호를 추가</strong>하고 타입 파라미터를 기술한 다음,<br>
 리턴 타입과 파라미터 타입으로 타입 파라미터를 사용하면 됩니다.
 
 ```
@@ -91,13 +93,18 @@ public class Util {
 }
 ```
 <br>
-호출방법<br>
-리턴타입 변수 = <구체적타입> 메소드명(파라미터값); //명시적으로 구체적 타입을 지정<br>
-리턴타입 변수 = 메소드명(파라미터값); 			  //매개값을 보고 컴파일러가 구체적 타입을 추정<br>
-<br>
-Box class의 boxing method를 호출하는 방법<br>
-Box<Integer> box = <Integer>boxing(100); //타입 파라미터를 명시적으로 Integer로 지정<br>
-Box<Integer> box = boxing(100);			//타입 파라미터를 컴파일러가 Integer로 추정<br>
+<strong>호출방법</strong><br>
+```
+//1. 명시적으로 구체적 타입을 지정
+//리턴타입 변수 = <구체적타입> 메소드명(파라미터값);
+//2. 매개값을 보고 컴파일러가 구체적 타입을 추정 
+//리턴타입 변수 = 메소드명(파라미터값); 			  
+
+//1. 타입 파라미터를 명시적으로 Integer로 지정
+Box&lt;Integer&gt; box = &lt;Integer&gt;boxing(100); 
+//2. 타입 파라미터를 컴파일러가 Integer로 추정
+Box<Integer> box = boxing(100);			
+```
 <br>
 
 
@@ -105,22 +112,24 @@ Box<Integer> box = boxing(100);			//타입 파라미터를 컴파일러가 Integ
 
 
 ### 4. Bounded Type Parameter (제한된 타입 파라미터)
-타입 파라미터(“<>” 사이에 들어갈 Type)에 지정되는 구체적인 타입을 제한할 때 사용합니다.<br>
+타입 파라미터(“<>” 사이에 들어갈 type)에 지정되는 구체적인 타입을 제한할 때 사용합니다.<br>
 <br>
 예를 들면, 숫자를 연산하는 제네릭 메소드의 파라미터로 <br>
 Number 클레스 타입 또는 하위 클래스 타입(Byte, Short, Integer, Long, Double)의 인스턴스만 가져야 한다면,<br>
 extends 키워드로 받을 수 있는 파라미터를 제한할 수 있습니다.<br>
 <br>
-사용방법<br>
+<strong>사용방법</strong><br>
 제한된 타입 파라미터를 선언하려면, 타입 파라미터 뒤에 extends 키워드를 붙이고 상위 타입을 명시하면 됩니다.<br>
 ```
 //public <T extends 상위타입> 리턴타입 메소드이름(매개변수, …) { … }
 public <T extends Number> int compare(T t1, T t2){ //… }
 ```
-주의할 점<br>
--extends 뒤에 올 타입은 클래스뿐만 아니라 인터페이스도 가능하지만 인터페이스라고해서 Implements를 사용하지 않습니다.<br>
--메소드의 중괄호 {} 안에서 타입 파라미터 변수로 사용 가능한 것은 extends 뒤에 올 타입의 맴버 (필드, 메소드)로 제한됩니다.<br>
-하위 타입에만 있는 필드와 메소드는 사용할 수 없습니다.<br>
+이제 compare의 파라미터는 Number 클레스 타입 또는 하위 클래스 타입(Byte, Short, Integer, Long, Double)의 인스턴스만 가질 수 있습니다.
+<br>
+<strong>주의할 점</strong><br>
+- extends 뒤에 올 타입은 클래스뿐만 아니라 인터페이스도 가능하지만 인터페이스라고해서 Implements를 사용하지 않습니다.<br>
+- 메소드의 중괄호 {} 안에서 타입 파라미터 변수로 사용 가능한 것은 extends 뒤에 올 타입의 맴버 (필드, 메소드)로 제한됩니다.<br>
+즉, 하위 타입에만 있는 필드와 메소드는 사용할 수 없습니다.<br>
 ```
 public class Util {
 	public <T extends Number> int compare(T t1, T t2){
@@ -138,26 +147,26 @@ public class BoundedTypeParameterExample {
 	}
 }
 ```
-
+<br>
 
 
 ### 5.Wildcard Generic Type
-스포츠에서 와일드 카드(wild card)는 정규규칙에 의해 통과하지 못한 선수나 팀에 자격을 주는 것을 뜻하는 말로, <br>
-'아무렇게나 쓸 수 있는'이라는 의미에서 나온 말입니다.<br>
+스포츠에서 와일드 카드 (wild card) 는 정규규칙에 의해 통과하지 못한 선수나 팀에 자격을 주는 것을 뜻하는 말로, <br>
+'아무렇게나 쓸 수 있는' 이라는 의미에서 나온 말입니다.<br>
 <br>
-코드에서 ? 를 일반적으로 와일드 카드(wild card)라고 부릅니다.<br>
+코드에서 ? 를 일반적으로 와일드 카드 (wild card) 라고 부릅니다.<br>
 <br>
-제네릭 타입에 와일드카드를 다음과 같이 세 가지 형태로 사용할 수 있습니다.<br>
-제네릭타입 <?> : 모든 클레스나 인터페이스 타입이 올 수 있습니다. 내부적으로는 Object로 인식합니다.<br>
-제네릭타입 <? extends 객체자료형> : 명시된 클레스나 인터페이스 타입 또는 이를 상속한 하위 타입만 올 수 있습니다.<br>
-제네릭타입 <? super 객체자료형> : 명시된 클레스나 인터페이스 타입 또는 이의 상위 타입만 올 수 있습니다.<br>
-객체 자료형에는 클래스 뿐만 아니라 인터페이스도 가능합니다.<br>
-인터페이스라고해서 extends 대신 implement를 사용하지 않습니다.<br>
+제네릭 타입에 와일드카드를 다음과 같이 <strong>세 가지 형태</strong>로 사용할 수 있습니다.<br>
+ <?> : 모든 클레스나 인터페이스 타입이 올 수 있습니다. 내부적으로는 Object 로 인식합니다.<br>
+ <? extends 객체자료형> : 명시된 클레스나 인터페이스 타입 또는 이를 상속한 하위 타입만 올 수 있습니다.<br>
+ <? super 객체자료형> : 명시된 클레스나 인터페이스 타입 또는 이의 상위 타입만 올 수 있습니다.<br>
+ <br>
+객체 자료형에는 클래스 뿐만 아니라 인터페이스도 가능합니다. 하지만 인터페이스라고해서 extends 대신 implement를 사용하지 않습니다.<br>
 <br>
 쉽게 예를 들면 <br>
 A > B > C > D 순으로 상속된 class들이 있을 때,<br>
 <? super B> 가 의미하는 class 는 B, A class<br>
-<? extends C> 가 의미하는 class 는 C, D class<br>
+<? extends C> 가 의미하는 class 는 C, D class 입니다.<br>
 <br>
 제네릭 타입과 와일드 카드를 아래 소스와 같이 활용할 수 있습니다.<br>
 ```
@@ -206,9 +215,12 @@ public class WildCardSample {
     }
 }
 ```
+<br>
+<br>
 일단 callWildCardMethod()를 보면<br>
 WildCardGeneric 클래스의 타입 파라미터에 String 타입을 넣어 wildcard 인스턴스를 생성했습니다.<br>
 ( WildCardGeneric<String> wildcard = new WildCardGeneric<>(); )<br>
+<br>
 그리고 wildcardStringMethod()메소드를 호출하여 해당 객체를 파라메터로 넣고 wildCard값을 출력하고 있습니다.<br>
 ( public void wildcardStringMethod(WildCardGeneric<String> c) )<br>
 <br>
@@ -218,23 +230,21 @@ wildcardStringMethod()의 파라미터에 사용할 수 없습니다.<br>
 그러면 wildcard2의 wildCard값을 출력하기 위해서 WildCardGeneric<Integer> 타입의 매개변수를 받는 메소드를 또 만들어야 할까요?<br>
 ( public void wildcardStringMethod(WildCardGeneric<Integer> c) )<br>
 <br>
-이럴 때 사용하는게 wildcardStringMethod2() 메소드에서 쓴 것과 같은 wildcard 타입입니다. <br>
-여기서는 매개변수에 WildCardGeneric 클래스의 타입으로 ❮?❯ 라고 썻습니다. <br>
-이 ?에는 어떤 타입도 들어갈 수 있습니다.<br>
+이럴 때 사용하는게 <strong>wildcardStringMethod2() 메소드에서 쓴 것과 같은 wildcard 타입</strong>입니다. <br>
+여기서는 매개변수에 WildCardGeneric 클래스의 타입으로 <?> 라고 썻습니다. <br>
+이 ? 에는 어떤 타입도 들어갈 수 있습니다.<br>
 ( <?>는 <? extends Object>라고 생각할 수 있습니다.<br>
 즉, ‘Object 클래스를 상속받는 모든 클래스를 타입으로 사용할 수 있다’ 의 의미입니다. )<br>
 <br>
-와일드카드는 파라미터로만 사용할 수 있습니다.<br>
-예를 들어 WildCardGeneric❮?❯ wildcard = new WildCardGeneric❮String❯(); <br>
-혹은 WildCardGeneric❮?❯ wildcard = new WildCardGeneric❮❯(); <br>
-과 같이 사용하면 예외가 발생합니다.<br>
+<strong>와일드카드는 파라미터로만 사용할 수 있습니다.</strong><br>
+예를 들어 WildCardGeneric<?> wildcard = new WildCardGeneric<String>(); <br>
+혹은 WildCardGeneric<?> wildcard = new WildCardGeneric<>(); 과 같이 사용하면 예외가 발생합니다.<br>
 (인스턴스가 만들어질 때 type parameter가 확정되어 있어야하기 때문입니다.)<br>
 <br>
 
 
 ### 6.Not Allowed Generic Type
-허용하지 않는 사용법<br>
-<br>
+<strong>허용하지 않는 사용법</strong><br>
 - static 필드는 제너릭 타입을 가질 수 없습니다.<br>
 // private static T t;<br>
 <br>
@@ -244,16 +254,19 @@ class NotAllowedGenericType<T> {
  	new T(); //X
 }
 ```
+<br>
 - 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고,<br>
-(T[])(new Object[n]) 으로 생성해야합니다.
+(T[])(new Object[n]) 으로 생성해야합니다.<br>
 ```
 class NotAllowedGenericType<T> {
  	private T[] array = (T[]) (new Object[원하는크기]);
 }
  ```
+<br>
 - primitives 타입으로 제너릭 타입을 선언할 수 없습니다.<br>
-// List<int> list = new ArrayList<>();<br>
-
+ ```
+List<int> list = new ArrayList<>(); //(X, 애러)
+ ```
 
 
 
@@ -322,8 +335,7 @@ public static void compact(List<?> list)
 ### 면접에서 받았던 Generic 관련 질문
 (기억을 더듬어 재구성 하였습니다.)<br>
 <br>
-1.<br>
-아래와 같은 소스가 유효할까?<br>
+1. 아래와 같은 소스가 유효할까?<br>
 ```
 List<String> stringList = new ArrayList<>();
 List<Object> objectList = stringList;
@@ -332,26 +344,25 @@ List<Object> objectList = stringList;
 <br>
 위와 같은 코드는 다음과 같이 타입 애러가 발생합니다.<br>
 //Incompatible types.<br>
-//Required: ArrayList<java.lang.Object><br>
-//Found:      ArrayList<java.lang.String><br>
+//Required: ArrayList&lt;java.lang.Object&gt;<br>
+//Found:      ArrayList&lt;java.lang.String&gt;<br>
 <br>
 면접에서 질문을 들었을 때는 Object는 모든 Java 클레스들의 부모 클레스 이므로 <br>
 가능한 문법이 아닐까라고 생각했지만, <br>
-애러 문구를 통해서 stringList의 타입은 그냥 String 타입이 아니라 ArrayList<java.lang.String>이고 <br>
-objectList의 타입은 그냥 Object 타입이 아니라 ArrayList<java.lang.Object>라서<br>
+애러 문구를 통해서 stringList의 타입은 그냥 String 타입이 아니라 ArrayList&lt;java.lang.String&gt; 이고 <br>
+objectList의 타입은 그냥 Object 타입이 아니라 ArrayList&lt;java.lang.Object&gt; 라서<br>
 유효하지 않은 문법입을 확인했습니다.<br>
 <br>
 <br>
-<br>
-2.<br>
-Object > Animal > Dog 순으로 상속한다고 할때,<br>
+
+2. Object > Animal > Dog 순으로 상속한다고 할때,<br>
 Class<? super Animal>  일 떄, Cass <Dog> class = new Class<>(); 이 유효한가?<br>
 <br>
 “답은 유효하지 않다.” 입니다. <br>
-Class<? super Animal>는 Animal과 Object Class의 인스턴스를 파라메터로 받습니다.<br>
+Class<? super Animal>는 Animal과 Object Class의 인스턴스를 파라미터로 받습니다.<br>
 <br>
-<br>
+
 Class <? extends Object> class 일 떄, Class <Animal> class = new Class<>(); 이 유효한가?<br>
 <br>
 “답은 유효하다.” 입니다. <br>
-Class <? extends Object>는 Object와 그의 하위 클래스 즉,  Object, Animal, Dog 인스턴스를 모두 파라메터로 받습니다.<br>
+Class <? extends Object>는 Object와 그의 하위 클래스 즉,  Object, Animal, Dog 인스턴스를 모두 파라미터로 받습니다.<br>
