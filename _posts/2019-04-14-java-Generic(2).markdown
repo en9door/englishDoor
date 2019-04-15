@@ -8,28 +8,26 @@ cover:
 ---
 
 
-##제네릭 사용 범위
+## 제네릭 사용 범위
 
-<strong>클래스(생성자), 인터페이스</strong><br>
+<strong>1. 클래스(생성자), 인터페이스</strong><br>
 -타입을 파라미터로 가지는 클레스와 인터페이스를 제네릭 타입이라고 합니다.<br>
 -클래스 또는 인터페이스 이름 뒤에 붙는 “<>” 사이에 T를 <strong>타입 파라미터</strong>라고 합니다.<br>
 -클래스 레벨에서 제네릭이 설정되어있으면 static 메서드에서는 사용할 수 없습니다. (인스턴스가 만들어질 때 type parameter를 받아오기 때문입니다.)<br>
 <br>
-<strong>메서드</strong><br>
+<strong>2. 메서드</strong><br>
 <strong>파라미터, 리턴 타입</strong>으로 사용합니다.<br>
 static, instance 메소드에 사용할 수 있습니다. (인스턴스 생성할 떄 type parameter를 받아와 타입이 설정되기 때문입니다.)<br>
 <br>
-구체적인 사용 방식을 살펴보겠니다.<br>
+아래에서 구체적인 사용 방식을 살펴보겠습니다.<br>
 <br>
 
-##제네릭 사용 방식
+## 제네릭 사용 방식
 
-###1.Class generic type, Interface generic type
+### 1.Class generic type, Interface generic type
 Class generic type과 Interface generic type은 사용방법이 유사합니다.<br>
 <br>
-아래 소스는 Class generic type 사용 예입니다.<br>
-<br>
-
+아래 소스는 Class generic type 사용 예입니다.
 ```
 //구현
 class ClassGenericType<T> {
@@ -49,10 +47,10 @@ ClassGenericType<String> classGenericType = new ClassGenericType<>();
 
 
 
-###2. multi type parameter(멀티 타입 파라미터)
+### 2. multi type parameter(멀티 타입 파라미터)
 멀티 타입 파라미터는 2개 이상의 제네릭 타입을 정의한 것입니다. 이 경우 각 타입 파라미터를 콤마로 구분하여 사용합니다.<br>
 <br>
-아래 코드에서는 <T1, T2>와 같이 제너릭 타입을 두 개 선언한 멀티 타입 파라미터를 사용하였습니다.<br>
+아래 코드에서는 <T1, T2>와 같이 제너릭 타입을 두 개 선언한 멀티 타입 파라미터를 사용하였습니다.
 
 ```
 interface InterfaceGenericType<T1, T2> {
@@ -77,12 +75,12 @@ class InterfaceGenericTypeImpl implements InterfaceGenericType<String, Intege
 
 
 
-###3.Method Generic Type
+### 3.Method Generic Type
 제네릭 메소드는 매개 타입과 리턴 타입으로 타입 파라미터를 갖는 메소드를 말합니다.<br>
 <br>
 선언 방법은 메서드의 리턴 타입 앞에 <> 기호를 추가하고 타입 파라미터를 기술한 다음,<br>
-리턴 타입과 파라미터 타입으로 타입 파라미터를 사용하면 됩니다.<br>
-<br>
+리턴 타입과 파라미터 타입으로 타입 파라미터를 사용하면 됩니다.
+
 ```
 public class Util {
         public static <T> Box<T> boxing(T t) {
@@ -106,7 +104,7 @@ Box<Integer> box = boxing(100);			//타입 파라미터를 컴파일러가 Integ
 
 
 
-###4. Bounded Type Parameter (제한된 타입 파라미터)
+### 4. Bounded Type Parameter (제한된 타입 파라미터)
 타입 파라미터(“<>” 사이에 들어갈 Type)에 지정되는 구체적인 타입을 제한할 때 사용합니다.<br>
 <br>
 예를 들면, 숫자를 연산하는 제네릭 메소드의 파라미터로 <br>
@@ -143,7 +141,7 @@ public class BoundedTypeParameterExample {
 
 
 
-###5.Wildcard Generic Type
+### 5.Wildcard Generic Type
 스포츠에서 와일드 카드(wild card)는 정규규칙에 의해 통과하지 못한 선수나 팀에 자격을 주는 것을 뜻하는 말로, <br>
 '아무렇게나 쓸 수 있는'이라는 의미에서 나온 말입니다.<br>
 <br>
@@ -234,7 +232,7 @@ wildcardStringMethod()의 파라미터에 사용할 수 없습니다.<br>
 <br>
 
 
-###6.Not Allowed Generic Type
+### 6.Not Allowed Generic Type
 허용하지 않는 사용법<br>
 <br>
 - static 필드는 제너릭 타입을 가질 수 없습니다.<br>
@@ -259,7 +257,7 @@ class NotAllowedGenericType<T> {
 
 
 
-###제네릭 참고
+### 제네릭 참고
 
 1. Number > Integer이지만 List<Number>와 List<Integer>는 관계없음<br>
 -타입파라미터의 상속관계와 List 상속관계는 상관없음<br>
@@ -293,7 +291,7 @@ S, U, V - 두번째, 세번째, 네번째에 선언된 타입<br>
 <br>
 
 
-###궁금한 점
+### 궁금한 점
 
 같은 결과를 내는 Generic Method와 Wildcard의 차이는 무엇인가?<br>
 <br>
@@ -321,7 +319,7 @@ public static void compact(List<?> list)
 
 
 
-###면접에서 받았던 Generic 관련 질문
+### 면접에서 받았던 Generic 관련 질문
 (기억을 더듬어 재구성 하였습니다.)<br>
 <br>
 1.<br>

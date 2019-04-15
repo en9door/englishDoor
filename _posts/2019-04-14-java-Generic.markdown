@@ -72,3 +72,4 @@ String one = list.get(0);
 ```
 
 ##관련 포스팅
+https://dongyyy.github.io/java/2019/04/14/java-Generic(2).html
