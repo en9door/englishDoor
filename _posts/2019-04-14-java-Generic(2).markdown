@@ -368,3 +368,10 @@ Class <? extends Object> class 일 떄, Class <Animal> class = new Class<>(); �
 <br>
 - “답은 유효하다.” 입니다. <br>
 Class <? extends Object>는 Object와 그의 하위 클래스 즉,  Object, Animal, Dog 인스턴스를 모두 파라미터로 받습니다.<br>
+
+
+
+
+## 관련 포스팅
+https://dongyyy.github.io/java/2019/04/14/java-Generic.html <br>
+https://dongyyy.github.io/java/2019/04/14/java-Generic(2).html

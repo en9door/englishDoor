@@ -71,5 +71,6 @@ list.add(“1”);
 String one = list.get(0);
 ```
 
-##관련 포스팅
+## 관련 포스팅
+https://dongyyy.github.io/java/2019/04/14/java-Generic.html <br>
 https://dongyyy.github.io/java/2019/04/14/java-Generic(2).html
