@@ -17,9 +17,10 @@ cover:
 <br>
 <strong>2. 메서드</strong><br>
 <strong>파라미터, 리턴 타입</strong>으로 사용합니다.<br>
-static, instance 메소드에 사용할 수 있습니다. <br>
+- static, instance 메소드에 사용할 수 있습니다. <br>
 (인스턴스 생성할 떄 type parameter를 받아와 타입이 설정되기 때문입니다.)<br>
 <br>
+
 아래에서 구체적인 사용 방식을 살펴보겠습니다.<br>
 <br>
 
@@ -127,9 +128,10 @@ public <T extends Number> int compare(T t1, T t2){ //… }
 이제 compare의 파라미터는 Number 클레스 타입 또는 하위 클래스 타입(Byte, Short, Integer, Long, Double)의 인스턴스만 가질 수 있습니다.
 <br>
 <strong>주의할 점</strong><br>
-- extends 뒤에 올 타입은 클래스뿐만 아니라 인터페이스도 가능하지만 인터페이스라고해서 Implements를 사용하지 않습니다.<br>
-- 메소드의 중괄호 {} 안에서 타입 파라미터 변수로 사용 가능한 것은 extends 뒤에 올 타입의 맴버 (필드, 메소드)로 제한됩니다.<br>
-즉, 하위 타입에만 있는 필드와 메소드는 사용할 수 없습니다.<br>
+-extends 뒤에 올 타입은 클래스뿐만 아니라 인터페이스도 가능하지만 인터페이스라고해서 Implements를 사용하지 않습니다.<br>
+-메소드의 중괄호 {} 안에서 타입 파라미터 변수로 사용 가능한 것은 extends 뒤에 올 타입의 맴버 (필드, 메소드)로 제한됩니다.<br>
+즉, 하위 타입에만 있는 필드와 메소드는 사용할 수 없습니다.
+
 ```
 public class Util {
 	public <T extends Number> int compare(T t1, T t2){
@@ -245,17 +247,17 @@ wildcardStringMethod()의 파라미터에 사용할 수 없습니다.<br>
 
 ### 6.Not Allowed Generic Type
 <strong>허용하지 않는 사용법</strong><br>
-- static 필드는 제너릭 타입을 가질 수 없습니다.<br>
+-static 필드는 제너릭 타입을 가질 수 없습니다.<br>
 // private static T t;<br>
 <br>
--  Generic type은 인스턴스로 생성할 수 없습니다.<br>
+-Generic type은 인스턴스로 생성할 수 없습니다.<br>
 ```
 class NotAllowedGenericType<T> {
  	new T(); //X
 }
 ```
 <br>
-- 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고,<br>
+-타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고,<br>
 (T[])(new Object[n]) 으로 생성해야합니다.<br>
 ```
 class NotAllowedGenericType<T> {
@@ -263,7 +265,7 @@ class NotAllowedGenericType<T> {
 }
  ```
 <br>
-- primitives 타입으로 제너릭 타입을 선언할 수 없습니다.<br>
+-primitives 타입으로 제너릭 타입을 선언할 수 없습니다.<br>
  ```
 List<int> list = new ArrayList<>(); //(X, 애러)
  ```
@@ -277,19 +279,19 @@ List<int> list = new ArrayList<>(); //(X, 애러)
 -저도 무슨말인지 모르겠지만 실제로 구현해봤을 때 불가능한 것을 알게 되었습니다.(아래 면접에서 받았던 질문 항목 참고)<br>
 <br>
 2. 인스턴스 생성할 때 타입 인자를 2번 주지않아도 타입을 추론함(다이아몬드 연산자)<br>
-- List<Integer> list = new ArrayList<Integer>(); : java6까지<br>
-- List<Integer> list = new ArrayList<>(); : java7부터 가능<br>
+-List<Integer> list = new ArrayList&lt;Integer&gt;(); : java6까지<br>
+-List<Integer> list = new ArrayList<>(); : java7부터 가능<br>
 <br>
 3. Collections.emptyList()를 호출시 <br>
 Collections class의 static 메서드 emptyList()를 사용할 때,<br>
 인자로 넘기는 것 없는데 <T> 타입추론은 어떻게하는가?<br>
-- List<T> list <- Collections.emptyList() 리턴되는 리스트가 사용되면서 타입추론<br>
-- 명시적으로 메서드 앞에 <타입> 타입 파라미터를 넘겨줄 수도 있음<br>
+-List<T> list <- Collections.emptyList() 리턴되는 리스트가 사용되면서 타입추론<br>
+-명시적으로 메서드 앞에 <타입> 타입 파라미터를 넘겨줄 수도 있음<br>
 <br>
 4. 재네릭 타입도 부모 클래스가 될 수 있다. 즉, 상속이 가능하다.<br>
-- class MyList<T> implements List<T>{…} 상속 가능합니다.<br>
-- class MyList<T, S, U, V> implements List<T, M>{…}  확장 가능합니다.<br>
-- class MyList<M> implements List<T>{…} 상위 타입 무시하고 확장 불가능합니다.<br>
+-class MyList<T> implements List<T>{…} 상속 가능합니다.<br>
+-class MyList<T, S, U, V> implements List<T, M>{…}  확장 가능합니다.<br>
+-class MyList<M> implements List<T>{…} 상위 타입 무시하고 확장 불가능합니다.<br>
 <br>
 5.제네릭 타입의 이름을 짓는 강제성 없는 규칙이 있습니다.(보는 사람들의 이해를 돕기위해)<br>
 E - Element(요소)<br>
@@ -335,7 +337,7 @@ public static void compact(List<?> list)
 ### 면접에서 받았던 Generic 관련 질문
 (기억을 더듬어 재구성 하였습니다.)<br>
 <br>
-1. 아래와 같은 소스가 유효할까?<br>
+1.아래와 같은 소스가 유효할까?<br>
 ```
 List<String> stringList = new ArrayList<>();
 List<Object> objectList = stringList;
@@ -355,7 +357,7 @@ objectList의 타입은 그냥 Object 타입이 아니라 ArrayList&lt;java.lang
 <br>
 <br>
 
-2. Object > Animal > Dog 순으로 상속한다고 할때,<br>
+2.Object > Animal > Dog 순으로 상속한다고 할때,<br>
 Class<? super Animal>  일 떄, Cass <Dog> class = new Class<>(); 이 유효한가?<br>
 <br>
 “답은 유효하지 않다.” 입니다. <br>
