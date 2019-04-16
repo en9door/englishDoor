@@ -240,15 +240,15 @@ public class WildCardSample {
 3.그런데 또 다른 WildCardGeneric 클래스의 인스턴스 wildcard2의 경우, 타입 파라미터에 Integer 타입을 넣어 인스턴스를 생성했기 때문에<br>
 4.wildcardStringMethod() 의 파라미터에 사용할 수 없습니다.<br>
 <br>
-여기서 <strong>Generic 을 사용시에는 다형성이 허용되지 않는다는 사실</strong> 을 알 수 있습니다.
+여기서 <strong>Generic 을 사용시에는 다형성이 허용되지 않는다는 사실</strong> 을 알 수 있습니다.<br>
 Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성으로 인해 Number 타입의 변수에 Integer 인스턴스 할당이 가능합니다.<br>
-하지만, Generic 사용시에는 다형성이 허용되지 않아 Integer 타입을 허용하지 않습니다.
-따라서 <strong>언제나 WildCardGeneric<Number> 타입 파라미터만 허용합니다.</strong><br>
-형 안정성을 고려한 정책입니다. ( 자세한 설명은 참고 : https://creator1022.tistory.com/142 )
+하지만, Generic 사용시에는 다형성이 허용되지 않아 Integer 타입을 허용하지 않습니다.<br>
+따라서 <strong>언제나 WildCardGeneric<Number> 타입 파라미터만 허용합니다.</strong> <br>
+형 안정성을 고려한 정책입니다. ( 자세한 설명은 참고 : https://creator1022.tistory.com/142 )<br>
 <br>
 그러면 wildcard2 의 wildCard 값을 출력하기 위해서 WildCardGeneric<Integer> 타입의 매개변수를 받는 메소드를 또 만들어야 할까요?<br>
 ( public void wildcardStringMethod(WildCardGeneric<Integer> c) )<br>
-매개변수를 타입마다 메소드를 오버로딩해서 선언해주어야 할까요?
+매개변수를 타입마다 메소드를 오버로딩해서 선언해주어야 할까요?<br>
 <br>
 이럴 때 사용하는게 <strong>wildcard 타입</strong> 입니다. <br>
 5.wildcardStringMethod2() 메소드를 보면 매개변수에 WildCardGeneric 클래스의 타입 파라미터를 <?> 라고 썻습니다. <br>
@@ -267,29 +267,34 @@ Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성
 ### 6.Not Allowed Generic Type
 <strong>허용하지 않는 사용법</strong><br>
 - static 필드는 제너릭 타입을 가질 수 없습니다.<br>
-// private static T t;<br>
+```
+private static T t; //(X)
+```
 <br>
+
 - Generic type은 인스턴스로 생성할 수 없습니다.<br>
 ```
 class NotAllowedGenericType<T> {
- 	new T(); //X
+ 	new T(); //(X)
 }
 ```
 <br>
-- 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고, (T[])(new Object[n]) 으로 생성해야합니다.<br>
+
+- 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고, (T[])(new Object[n]) 으로 생성해야합니다.
+<br>
 
 ```
 class NotAllowedGenericType<T> {
  	private T[] array = (T[]) (new Object[원하는크기]);
 }
- ```
+```
 
 <br>
 - primitives 타입으로 제너릭 타입을 선언할 수 없습니다.<br>
 
- ```
+```
 List<int> list = new ArrayList<>(); //(X, 애러)
- ```
+```
 
 
 
@@ -363,13 +368,13 @@ List<Object> objectList = stringList;
 답은 “유효하지 않다.” 입니다.<br>
 <br>
 위와 같은 코드는 다음과 같이 타입 애러가 발생합니다.<br>
-//Incompatible types.<br>
-//Required: ArrayList&lt;java.lang.Object&gt;<br>
-//Found:      ArrayList&lt;java.lang.String&gt;<br>
+Incompatible types.<br>
+Required: ArrayList&lt;java.lang.Object&gt;<br>
+Found:      ArrayList&lt;java.lang.String&gt;<br>
 <br>
-면접에서 질문을 들었을 때는 Object는 모든 Java 클레스들의 부모 클레스 이므로 <br>
-가능한 문법이 아닐까라고 생각했지만, <strong>Generic 을 사용시에는 다형성이 허용되지 않습니다.</strong><br>
-애러 문구를 통해서 stringList의 타입은 그냥 String 타입이 아니라 ArrayList&lt;java.lang.String&gt; 이고 <br>
+면접에서 질문을 들었을 때는 Object는 모든 Java 클레스들의 부모 클레스 이므로 가능한 문법이 아닐까라고 생각했지만, <br>
+<strong>Generic 을 사용시에는 다형성이 허용되지 않습니다.</strong><br>
+애러 문구를 통해서도 stringList의 타입은 그냥 String 타입이 아니라 ArrayList&lt;java.lang.String&gt; 이고 <br>
 objectList의 타입은 그냥 Object 타입이 아니라 ArrayList&lt;java.lang.Object&gt; 라서<br>
 유효하지 않은 문법입을 확인했습니다.<br>
 <br>
