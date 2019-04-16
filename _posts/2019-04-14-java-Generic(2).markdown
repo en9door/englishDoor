@@ -242,7 +242,7 @@ public class WildCardSample {
 여기서 <strong>Generic 을 사용시에는 다형성이 허용되지 않는다는 사실</strong> 을 알 수 있습니다.<br>
 Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성으로 인해 Number 타입의 변수에 Integer 인스턴스 할당이 가능합니다.<br>
 하지만, Generic 사용시에는 다형성이 허용되지 않아 Integer 타입을 허용하지 않습니다.<br>
-따라서 언제나 <strong>WildCardGeneric<Number> 타입 파라미터만 허용합니다</strong>.<br>
+따라서 언제나 WildCardGeneric<Number> 타입 파라미터만 허용합니다.<br>
 형 안정성을 고려한 정책입니다. ( 자세한 설명은 참고 : https://creator1022.tistory.com/142 )<br>
 <br>
 그러면 wildcard2 의 wildCard 값을 출력하기 위해서 WildCardGeneric<Integer> 타입의 매개변수를 받는 메소드를 또 만들어야 할까요?<br>
