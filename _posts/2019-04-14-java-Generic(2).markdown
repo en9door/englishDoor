@@ -242,7 +242,7 @@ public class WildCardSample {
 여기서 <strong>Generic 을 사용시에는 다형성이 허용되지 않는다는 사실</strong> 을 알 수 있습니다.<br>
 Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성으로 인해 Number 타입의 변수에 Integer 인스턴스 할당이 가능합니다.<br>
 하지만, Generic 사용시에는 다형성이 허용되지 않아 Integer 타입을 허용하지 않습니다.<br>
-따라서 언제나 <strong>WildCardGeneric<Number> 타입 파라미터만 허용합니다.</strong><br>
+따라서 언제나 <strong>WildCardGeneric<Number> 타입 파라미터만 허용합니다</strong>.<br>
 형 안정성을 고려한 정책입니다. ( 자세한 설명은 참고 : https://creator1022.tistory.com/142 )<br>
 <br>
 그러면 wildcard2 의 wildCard 값을 출력하기 위해서 WildCardGeneric<Integer> 타입의 매개변수를 받는 메소드를 또 만들어야 할까요?<br>
@@ -255,7 +255,7 @@ Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성
 <?>는 <? extends Object> 라고 생각할 수 있습니다.<br>
 즉, ‘Object 클래스를 상속받는 모든 클래스를 타입으로 사용할 수 있다’ 의 의미입니다.<br>
 <br>
-<strong>와일드카드는 파라미터로만 사용할 수 있습니다.</strong><br>
+<strong>와일드카드는 파라미터로만 사용할 수 있습니다</strong>.<br>
 예를 들어 WildCardGeneric<?> wildcard = new WildCardGeneric<String>(); 과 같이 변수나 인스턴스에 사용하면 예외가 발생합니다.<br>
 (인스턴스가 만들어질 때 type parameter 가 확정되어 있어야하기 때문입니다.)<br>
 <br>
@@ -360,7 +360,7 @@ public static void compact(List<?> list)
 
 (기억을 더듬어 재구성 하였습니다.)<br>
 <br>
-1.아래와 같은 소스가 유효할까?<br>
+1. 아래와 같은 소스가 유효할까?<br>
 ```
 List<String> stringList = new ArrayList<>();
 List<Object> objectList = stringList;
@@ -380,14 +380,15 @@ objectList의 타입은 그냥 Object 타입이 아니라 ArrayList&lt;java.lang
 <br>
 <br>
 
-2.Object > Animal > Dog 순으로 상속한다고 할때,<br>
-Class<? super Animal>  일 떄, Cass <Dog> class = new Class<>(); 이 유효한가?<br>
-“답은 유효하지 않다.” 입니다. <br>
+2. Object > Animal > Dog 순으로 상속한다고 할때,<br>
+- Class<? super Animal>  일 떄, Cass <Dog> class = new Class<>(); 이 유효한가?<br>
+<br>
+답은 “유효하지 않다.” 입니다. <br>
 Class<? super Animal>는 Animal과 Object Class의 인스턴스를 파라미터로 받습니다.<br>
 <br>
-Class <? extends Object> class 일 떄, Class <Animal> class = new Class<>(); 이 유효한가?<br>
+- Class <? extends Object> class 일 떄, Class <Animal> class = new Class<>(); 이 유효한가?<br>
 <br>
-“답은 유효하다.” 입니다. <br>
+답은 “유효하다.” 입니다. <br>
 Class <? extends Object>는 Object와 그의 하위 클래스 즉,  Object, Animal, Dog 인스턴스를 모두 파라미터로 받습니다.<br>
 <br>
 <br>
