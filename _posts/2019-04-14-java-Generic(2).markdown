@@ -230,20 +230,19 @@ public class WildCardSample {
 }
 ```
 <br>
-<br>
 일단 <strong>callWildCardMethod()</strong> 를 보면<br>
-1.WildCardGeneric 클래스의 타입 파라미터에 Number 타입을 넣어 wildcard 인스턴스를 생성했습니다.<br>
+1. WildCardGeneric 클래스의 타입 파라미터에 Number 타입을 넣어 wildcard 인스턴스를 생성했습니다.<br>
 ( WildCardGeneric<Number> wildcard = new WildCardGeneric<>(); )<br>
 <br>
-2.그리고 wildcardStringMethod(WildCardGeneric<Number> c) 메소드를 호출하여 해당 객체를 파라메터로 넣고 wildCard 값을 출력하고 있습니다.<br>
+2. 그리고 wildcardStringMethod(WildCardGeneric<Number> c) 메소드를 호출하여 해당 객체를 파라메터로 넣고 wildCard 값을 출력하고 있습니다.<br>
 <br>
-3.그런데 또 다른 WildCardGeneric 클래스의 인스턴스 wildcard2의 경우, 타입 파라미터에 Integer 타입을 넣어 인스턴스를 생성했기 때문에<br>
-4.wildcardStringMethod() 의 파라미터에 사용할 수 없습니다.<br>
+3. 그런데 또 다른 WildCardGeneric 클래스의 인스턴스 wildcard2의 경우, 타입 파라미터에 Integer 타입을 넣어 인스턴스를 생성했기 때문에<br>
+4. wildcardStringMethod() 의 파라미터에 사용할 수 없습니다.<br>
 <br>
 여기서 <strong>Generic 을 사용시에는 다형성이 허용되지 않는다는 사실</strong> 을 알 수 있습니다.<br>
 Number class 는 Integer class 의 부모 class 로 일반적으로는 다형성으로 인해 Number 타입의 변수에 Integer 인스턴스 할당이 가능합니다.<br>
 하지만, Generic 사용시에는 다형성이 허용되지 않아 Integer 타입을 허용하지 않습니다.<br>
-따라서 <strong>언제나 WildCardGeneric<Number> 타입 파라미터만 허용합니다.</strong> <br>
+따라서 언제나 <strong>WildCardGeneric<Number> 타입 파라미터만 허용합니다.</strong><br>
 형 안정성을 고려한 정책입니다. ( 자세한 설명은 참고 : https://creator1022.tistory.com/142 )<br>
 <br>
 그러면 wildcard2 의 wildCard 값을 출력하기 위해서 WildCardGeneric<Integer> 타입의 매개변수를 받는 메소드를 또 만들어야 할까요?<br>
@@ -295,8 +294,8 @@ class NotAllowedGenericType<T> {
 ```
 List<int> list = new ArrayList<>(); //(X, 애러)
 ```
-
-
+<br>
+<br>
 
 ### 제네릭 참고
 
@@ -354,10 +353,11 @@ public static void compact(List<?> list)
 결국 타입 파라미터를 선언하고 2회 이상 쓸 일이 없을 경우, 시그니처 단순화의 관점에서 타입 파라미터를 선언하지 않는 와일드카드가 유용하다고 볼 수 있지 않을까 합니다.<br>
 참고: https://www.slipp.net/questions/202<br>
 
-
-
+<br>
+<br>
 
 ### 면접에서 받았던 Generic 관련 질문
+
 (기억을 더듬어 재구성 하였습니다.)<br>
 <br>
 1.아래와 같은 소스가 유효할까?<br>
@@ -382,17 +382,15 @@ objectList의 타입은 그냥 Object 타입이 아니라 ArrayList&lt;java.lang
 
 2.Object > Animal > Dog 순으로 상속한다고 할때,<br>
 Class<? super Animal>  일 떄, Cass <Dog> class = new Class<>(); 이 유효한가?<br>
-<br>
-- “답은 유효하지 않다.” 입니다. <br>
+“답은 유효하지 않다.” 입니다. <br>
 Class<? super Animal>는 Animal과 Object Class의 인스턴스를 파라미터로 받습니다.<br>
 <br>
-
 Class <? extends Object> class 일 떄, Class <Animal> class = new Class<>(); 이 유효한가?<br>
 <br>
-- “답은 유효하다.” 입니다. <br>
+“답은 유효하다.” 입니다. <br>
 Class <? extends Object>는 Object와 그의 하위 클래스 즉,  Object, Animal, Dog 인스턴스를 모두 파라미터로 받습니다.<br>
-
-
+<br>
+<br>
 
 
 ## 관련 포스팅
