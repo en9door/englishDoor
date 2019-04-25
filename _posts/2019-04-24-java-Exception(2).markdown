@@ -170,10 +170,11 @@ API 도큐먼트에서 AutoCloseable 인터페이스를 찾아 “All Known Impl
 <br>
 <br>
 
-## 참고
-이것이 자바다
 
-## 관련 포스팅
+### 참고
+이것이 자바다
+<br>
+### 관련 포스팅
 https://dongyyy.github.io/java/2019/04/24/java-Exception.html - 예외의 개념과 실행 예외<br>
 https://dongyyy.github.io/java/2019/04/24/java-Exception(2).html - 예외 처리 코드<br>
 https://dongyyy.github.io/java/2019/04/24/java-Exception(3).html - 예외 떠넘기기, 사용자 정의 예외<br>
