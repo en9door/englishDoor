@@ -16,10 +16,11 @@ permalink: /about/
     </script>
 </head>
 
-<img src="{{ site.baseurl }}/assets/Quote.png" title="Profile Picture" class="profile">
+<!-- <img src="{{ site.baseurl }}/assets/Quote.png" title="Profile Picture" class="profile"> -->
 
-## 한윤숙
-`Android Developer`<br>
+## 사업자 등록
+대표자명 : 한윤숙 
+사업자등록번호 : 390-07-01460
 
 ### 통신판매 등록
 `인천 서구`<br>
