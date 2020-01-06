@@ -27,12 +27,12 @@ permalink: /about/
 허가 <br>
  
 
-<--### EXPERIENCE
+<!-- ### EXPERIENCE
 * SK encar
 <h5>Seoul, Korea Nobember, 2016 - Present</h5>
 <h5>Android Developer</h5>
 <h6>Develop business logics for Android native and hybrid application with Java, JavaScript</h6>
-<br>-->
+<br>  -->
 
 ### CONTACT
 minssan9@gmail.com<br>
