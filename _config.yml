@@ -26,14 +26,14 @@ description:
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "https://minssan9.github.io"
+baseurl: # the subpath of your site, e.g. /blog/
 url: "https://minssan9.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
 # Build settings
 markdown: kramdown
-paginate: 5
+paginate: 1
 paginate_path: "/page:num/"
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
@@ -49,7 +49,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: "englishDoor"
+disqus_shortname: "engDoor"
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
