@@ -9,17 +9,25 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: 즐겁고 행복한 프로그래밍
-subtitle: "Dongy's blog"
-email: noahkim.j@gmail.com
-name: Dongy
-description: >
-  A simple yet classy theme for your Jekyll website or blog.
+title: 영어문
+subtitle: 영어의 문을 열어드립니다.
+email: minssan9@gmail.com
+name: Mike
+description: 
+필리핀 원어민 전화영어 서비스 영어문입니다!
+
+양질의 통화를 위해 Skype 설치 및 가입이 필요합니다.
+https://skype.daesung.com/main.asp
+
+앱 다운로드
+iphone - https://apps.apple.com/kr/app/iphoneyong-skype/id304878510
+android - https://play.google.com/store/apps/details?id=com.skype.raider&hl=ko
+
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: # the subpath of your site, e.g. /blog/
-url: "https://dongyyy.github.io" # the base hostname & protocol for your site
+url: "https://minssan9.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
@@ -41,7 +49,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: "dongybrog"
+disqus_shortname: "englishDoor"
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -114,8 +122,8 @@ social:
 
   - name: Instagram
     icon: instagram
-    username:
-    url:
+    username: english.door
+    url:https://instagram.com/english.door
     desc: Follow me on Instagram
     share: false
 
