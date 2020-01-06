@@ -1,25 +1,25 @@
 ---
 layout: post
 title:  "안내사항!"
-date:   2020-01-01 00:00:00
+date:   2020-01-01 01:01:01
 author: minssan9
-categories: Notice
+categories: Post
 cover:  "/assets/the_red_sea.jpg"
 ---
 
 ## 안내사항
 
-안내사항 (필독)
-양질의 통화를 위해 Skype 설치 및 가입이 필요합니다.
-https://skype.daesung.com/main.asp
+<strong>안내사항 (필독)</strong><br>
+양질의 통화를 위해 Skype 설치 및 가입이 필요합니다.<br>
+https://skype.daesung.com/main.asp<br>
 <br>
-앱 다운로드
-iphone - https://apps.apple.com/kr/app/iphoneyong-skype/id304878510
-android - https://play.google.com/store/apps/details?id=com.skype.raider&hl=ko
+<strong>앱 다운로드</strong><br>
+iphone - https://apps.apple.com/kr/app/iphoneyong-skype/id304878510<br>
+android - https://play.google.com/store/apps/details?id=com.skype.raider&hl=ko<br>
 <br>
-결제링크 * 결제전에는 꼭 스케줄 조정 후 결제해주세요!
-주5일 10분 - http://www.payapp.kr/L/z1JbVE
-주5일 20분 - http://www.payapp.kr/L/z1IS58
-주5일 30분 - http://www.payapp.kr/L/z1IS64
-주5일 40분 - http://www.payapp.kr/L/z1IS4F
+결제링크 * 결제전에는 꼭 스케줄 조정 후 결제해주세요!<br>
+주5일 10분 - http://www.payapp.kr/L/z1JbVE<br>
+주5일 20분 - http://www.payapp.kr/L/z1IS58<br>
+주5일 30분 - http://www.payapp.kr/L/z1IS64<br>
+주5일 40분 - http://www.payapp.kr/L/z1IS4F<br>
 <br> 

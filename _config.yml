@@ -80,8 +80,8 @@ descriptions:
 social:
   - name: Twitter
     icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
+    username:  
+    url:  
     desc: Follow me on Twitter
     share: true
 
@@ -94,8 +94,8 @@ social:
 
   - name: GitHub
     icon: github
-    username: bencentra
-    url: https://github.com/minssan9
+    username: 
+    url: 
     desc: Fork me on GitHub
     share: false
 
