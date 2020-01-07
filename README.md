@@ -1,6 +1,8 @@
 # Centrarium [![Circle CI](https://circleci.com/gh/bencentra/centrarium/tree/master.svg?style=svg)](https://circleci.com/gh/bencentra/centrarium/tree/master)
 
-A simple yet classy theme for your Jekyll website or blog. Customizable to fit your style or brand.
+상호명 : 영어문<br>
+대표자명 : 한윤숙<br>
+사업자등록번호 : 390-07-01460<br>
 
 Built with these awesome libraries:
 * [Bourbon][bourbon]

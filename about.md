@@ -19,6 +19,7 @@ permalink: /about/
 <!-- <img src="{{ site.baseurl }}/assets/Quote.png" title="Profile Picture" class="profile"> -->
 
 ## 사업자 등록
+상호명 : 영어문<br>
 대표자명 : 한윤숙 <br>
 사업자등록번호 : 390-07-01460
 
