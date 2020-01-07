@@ -46,7 +46,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: "engDoor"
+disqus_shortname: "sanghunmin"
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
