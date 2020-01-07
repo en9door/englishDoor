@@ -4,7 +4,7 @@ title:  "안내사항!"
 date:   2020-01-01 01:01:01
 author: 영어문
 categories: Notice
-cover:  "/assets/the_red_sea.jpg"
+# cover:  "/assets/the_red_sea.jpg"
 ---
 
 ## 안내사항
