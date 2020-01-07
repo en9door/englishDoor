@@ -38,7 +38,7 @@ permalink: /about/
 <br>  -->
 
 ### CONTACT
-minssan9@gmail.com<br>
+en9door@gmail.com<br>
 
 
 
