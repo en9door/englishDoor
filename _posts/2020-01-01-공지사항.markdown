@@ -18,16 +18,16 @@ iphone - [https://apps.apple.com/kr/app/iphoneyong-skype/id304878510][iphone]<br
 android - [https://play.google.com/store/apps/details?id=com.skype.raider&hl=ko][android]<br>
 <br>
 결제링크 * 결제전에는 꼭 스케줄 조정 후 결제해주세요!<br>
-주5일 10분 - [http://www.payapp.kr/L/z1JbVE][10]<br>
-주5일 20분 - [http://www.payapp.kr/L/z1IS58][20]<br>
-주5일 30분 - [http://www.payapp.kr/L/z1IS64][30]<br>
-주5일 40분 - [http://www.payapp.kr/L/z1IS4F][40]<br>
+주5일 10분 - [http://www.payapp.kr/L/z1JkY8][10]<br>
+주5일 20분 - [http://www.payapp.kr/L/z1JkW8][20]<br>
+주5일 30분 - [http://www.payapp.kr/L/z1JkXA][30]<br>
+주5일 40분 - [http://www.payapp.kr/L/z1JkVC][40]<br>
 <br> 
 
-[10]:http://www.payapp.kr/L/z1JbVE
-[20]:http://www.payapp.kr/L/z1IS58
-[30]:http://www.payapp.kr/L/z1IS64
-[40]:http://www.payapp.kr/L/z1IS4F
+[10]:http://www.payapp.kr/L/z1JkY8
+[20]:http://www.payapp.kr/L/z1JkW8
+[30]:http://www.payapp.kr/L/z1JkXA
+[40]:http://www.payapp.kr/L/z1JkVC
 [skype]:https://skype.daesung.com/main.asp
 [iphone]:https://apps.apple.com/kr/app/iphoneyong-skype/id304878510
 [android]:https://play.google.com/store/apps/details?id=com.skype.raider&hl=ko
